@@ -1,0 +1,24 @@
+{
+  "name": "bao-dien-tu-th16-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ws --port=8081"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beohoang98/bao-dien-tu-th16-static.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beohoang98/bao-dien-tu-th16-static/issues"
+  },
+  "homepage": "https://github.com/beohoang98/bao-dien-tu-th16-static#readme",
+  "devDependencies": {
+    "local-web-server": "^2.6.1"
+  }
+}
