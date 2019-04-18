@@ -1,7 +1,7 @@
 yum install ruby23-devel.x86_64
 
-gem install jekyll bundler
+gem install bundler
 
 bundle install
 
-jekyll build
+bundle exec jekyll build
