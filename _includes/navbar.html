@@ -1,20 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-lightSearch sticky-top shadow">
     <div class="container">
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="/" title="Trang chủ">
+            <img width="32px" src="/static/img/logo.png" alt="">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav navbar-menu mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Trang chủ</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a id="link-cong-nghe" class="nav-link dropdown-toggle" 
                         role="button" data-toggle="dropdown" href="/cong-nghe/">Công
                         nghệ</a>
-                    <div class="dropdown-menu bg-dark text-light" aria-labelledby="link-cong-nghe">
+                    <div class="dropdown-menu" aria-labelledby="link-cong-nghe">
                         <a href="/cong-nghe/smartphone/" class="nav-link dropdown-item">Smartphone</a>
                         <a href="/cong-nghe/startup/" class="nav-link dropdown-item">Startup</a>
                     </div>
@@ -22,15 +21,20 @@
                 <li class="nav-item dropdown">
                     <a id="link-the-thao" class="nav-link  dropdown-toggle" 
                         role="button" data-toggle="dropdown" href="/cong-nghe/">Thể thao</a>
-                    <div class="dropdown-menu bg-dark text-light" aria-labelledby="link-the-thao">
-                        <a href="/the-thao/bd-vn/" class="nav-link dropdown-item">Bóng đá Việt Nam</a>
-                        <a href="/the-thao/bd-anh/" class="nav-link dropdown-item">Bóng đá Anh</a>
+                    <div class="dropdown-menu" aria-labelledby="link-the-thao">
+                        <a href="/the-thao/bd-vn/" class="dropdown-item nav-link">Bóng đá Việt Nam</a>
+                        <a href="/the-thao/bd-anh/" class="dropdown-item nav-link">Bóng đá Anh</a>
                     </div>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                    <button type="submit" class="btn btn-outline-light">
+                        <i class="fas fa-search"></i>
+                        <span class="sr-only">Tìm kiếm</span>
+                    </button>
+                </div>
             </form>
         </div>
     </div>

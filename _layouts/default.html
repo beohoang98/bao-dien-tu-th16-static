@@ -6,9 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/static/img/logo.png" type="image/png">
 
-    <title>{{title}}</title>
+    {%- if page.title != '' and page.title -%}
+        <title>{{page.title}} | {{site.title}}</title>
+        <meta property="og:title" content="{{page.title}} | {{site.title}}">
+    {%- else -%}
+        <title>{{site.title}}</title>
+        <meta property="og:title" content="{{site.title}}">
+    {%- endif -%}
+    
     <meta name="description" content="{{description}}">
+    <meta property="og:description" content="{{page.description}}">
+    <meta property="og:url" content="{{site.url}}">
+    {%- if page.thumbnail -%}
+        <meta property="og:image" content="{{site.url}}{{page.thumbnail}}">
+    {%- else -%}
+        <meta property="og:image" content="{{site.url}}/static/img/messi-mu.png">
+    {%- endif -%}
+    
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css" integrity="sha384-QokYePQSOwpBDuhlHOsX0ymF6R/vLk/UQVz3WHa6wygxI5oGTmDTv8wahFOSspdm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css" integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq" crossorigin="anonymous">

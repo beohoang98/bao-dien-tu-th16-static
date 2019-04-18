@@ -16,7 +16,9 @@ author: An
 
 Cuộc ngược dòng trước PSG tiếp thêm tự tin cho Man Utd nhưng thực tế đây là trận đấu họ bị đánh giá thấp hơn rất nhiều so với Barca. Theo thống kê của hãng phân tích dữ liệu Gracenote, Man Utd chỉ có 9% khả năng vào vòng bán kết. Đây không phải điều khó hiểu bởi Barca là thế lực vô cùng mạnh mẽ khi được chơi trên sân nhà Nou Camp. Messi và các đồng đội mới thua một trận ở Nou Camp trong mùa giải này.
 
-![Messi sẵn sàng cho trận tái đấu Man Utd. Ảnh: AFP.](https://i-thethao.vnecdn.net/2019/04/16/0011667e-500-7662-1555404192.jpg)
+| ![Messi sẵn sàng cho trận tái đấu Man Utd. Ảnh: AFP.](https://i-thethao.vnecdn.net/2019/04/16/0011667e-500-7662-1555404192.jpg) |
+|:---:|
+| Messi sẵn sàng cho trận tái đấu Man Utd. Ảnh: AFP |
 
 Sau khi va chạm mạnh với Smalling ở lượt đi, Messi đã ngồi ngoài trận đấu với Huesca cuối tuần qua và sẵn sàng trở lại. Một kết quả hòa là đủ cho Barca vào vòng bán kết lần đầu tiên từ năm 2015, nhưng HLV Valverde muốn các học trò ra sân để giành chiến thắng. "Kết quả ở lượt đi không thể là sự đảm bảo. Chúng tôi phải chơi đúng với sở trường. Chúng tôi không được phép để họ ghi bàn. Chúng tôi muốn đi tiếp bằng chiến thắng", nhà cầm quân 55 tuổi cho biết.
 
