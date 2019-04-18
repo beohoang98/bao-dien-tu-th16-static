@@ -1,0 +1,23 @@
+<article class="card" title="{{include.post.title}}">
+    <a href="{{include.post.url}}" class="post">
+        <img src="{{include.post.thumbnail}}" class="card-img-top" alt="">
+        <div class="card-body">
+            <h5 class="card-title">{{include.post.title}}</h5>
+            <p class="card-text">{{include.post.description}}</p>
+            <div>
+                <header>Tag:
+                    <span>
+                        <ul class="tag-news">
+                            {%- for tag in include.post.tags -%}
+                            <li><a href="#" class='badge badge-primary'>{{tag}}</a></li>
+                            {%- endfor -%}
+                        </ul>
+                    </span>
+                </header>
+            </div>
+        </div>
+        <div class="card-footer text-muted">
+            <time class="post-time">{{ include.post.date | date: '%A, %d-%B-%Y' }}</time>
+        </div>
+    </a>
+</article>

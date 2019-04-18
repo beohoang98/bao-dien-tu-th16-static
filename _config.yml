@@ -1,1 +1,12 @@
 theme: jekyll-theme-minimal
+title: Báo điện tử TH16
+description: Đồ án giữa kỳ Web CQ2016-33
+permalink: pretty
+
+collections:
+  pages:
+    output: true
+    permalink: /:slug/
+  posts:
+    output: true
+    permalink: /:categories/:slug/
