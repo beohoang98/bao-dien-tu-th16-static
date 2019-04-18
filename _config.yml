@@ -12,6 +12,8 @@ collections:
     output: true
     permalink: /:categories/:slug/
 
+theme: minima
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
