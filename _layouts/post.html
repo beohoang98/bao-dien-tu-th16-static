@@ -7,28 +7,69 @@ layout: default
         <img src="{{page.thumbnail}}" alt="">
     </figure>
 
-    <section class="post-body container">
-        <h1 class="post-title">{{page.title}}</h1>
-        <div class="d-flex align-items-center text-secondary">
-            <div class="post-author mr-4">
-                <i class="fas fa-user"></i>&nbsp;
-                {{page.author}}
+    <section class="container">
+
+        <div class="row">
+            <div class="col-lg-9">
+                <section class="post-body mb-5">
+                    <h1 class="post-title">{{page.title}}</h1>
+                    <div class="d-flex align-items-center text-secondary">
+                        <div class="post-author mr-4">
+                            <i class="fas fa-user"></i>&nbsp;
+                            {{page.author}}
+                        </div>
+                        <div class="post-date mr-4">
+                            <i class="fas fa-clock"></i>&nbsp;
+                            {{page.date | date: '%d/%m/%Y'}}
+                        </div>
+                        <div class="post-category mr-4">
+                            <i class="fas fa-tags" title="Chuyên mục"></i>&nbsp;
+                            {%- assign cate_path = "" -%}
+                            {%- for cate in page.categories -%}
+                                {%- assign cate_path = cate_path | append: "/" | append: cate -%}
+                                <a href="{{cate_path}}" class="badge">{{cate}}</a>
+                            {%- endfor -%}
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        {{- page.content -}}
+                    </div>
+                    <div class="post-tags text-secondary">
+                        <strong>Tags</strong>
+                        {%- for item in page.tags -%}
+                        <a class="mx-2" href="/tags/{{item | slugify}}">
+                            <i class="fas fa-tag">{{item}}</i>&nbsp;
+                        </a>
+                        {%- endfor -%}
+                    </div>
+                </section>
             </div>
-            <div class="post-date mr-4">
-                <i class="fas fa-clock"></i>&nbsp;
-                {{page.date | date: '%d/%m/%Y'}}
+            <div class="col-lg-3">
+                <div class="sticky-top" style="top: 70px; z-index: 99;">
+                    <h3>Bài viết liên quan</h3>
+                    {%- assign next = page.next -%}
+                    {%- if next -%}
+                        {%- include post-small.html post=next -%}
+                        {%- assign next = next.next -%}
+                        {%- if next -%}
+                            {%- include post-small.html post=next -%}
+                        {%- endif -%}
+                    {%- endif -%}
+
+                    {%- assign prev = page.previous -%}
+                    {%- if page.previous -%}
+                        {%- include post-small.html post=page.previous -%}
+                        {%- assign prev = prev.previous -%}
+                        {%- if prev -%}
+                            {%- include post-small.html post=prev -%}
+                            {%- assign prev = prev.previous -%}
+                            {%- if prev -%}
+                                {%- include post-small.html post=prev -%}
+                            {%- endif -%}
+                        {%- endif -%}
+                    {%- endif -%}
+                </div>
             </div>
-        </div>
-        <div class="post-content">
-            {{- page.content -}}
-        </div>
-        <div class="post-tags text-secondary">
-            <strong>Tags</strong>
-            {%- for item in page.tags -%}
-                <a class="mx-2" href="/tags/{{item | slugify}}">
-                    <i class="fas fa-tag">{{item}}</i>&nbsp;
-                </a>
-            {%- endfor -%}
         </div>
     </section>
 </main>

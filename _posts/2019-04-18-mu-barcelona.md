@@ -6,6 +6,7 @@ category: [the-thao, bd-anh]
 description: Đội bóng nước Anh phải đánh bại Barca ngay ở Nou Camp nếu muốn tiến vào bán kết Champions League.
 thumbnail: /static/img/messi-mu.png
 author: An
+type: published
 ---
 
 Đây là lần đầu tiên Solskjaer trở lại sân Nou Camp với tư cách người trong cuộc, kể từ bàn thắng ấn định tỷ số 2-1 ở trận chung kết Champions League 1999. Số phận đưa ông một lần nữa gánh vác trọng trách ngược dòng cho Man Utd trên sân vận động huyền thoại xứ Catalonia.

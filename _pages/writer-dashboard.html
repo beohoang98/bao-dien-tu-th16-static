@@ -1,0 +1,101 @@
+---
+layout: default
+title: Writer Dashboard
+permalink: /profile-writer/
+---
+<link rel="stylesheet" href="/static/profile.css">
+<main class="container-fluid profile profile-writer">
+    <div class="d-flex flex-column flex-lg-row-reverse" style="height: inherit">
+        <div class="col-lg-3">
+            <div class="profile-info bg-light rounded">
+                <div class="profile-avatar">
+                    <img src="/static/img/messi-mu.png" alt="">
+                </div>
+                <div class="profile-displayName">Beo Hoang</div>
+                <div class="profile-username">@anaizhu98</div>
+                <div class="profile-birth">30/03/1998</div>
+                <div class="profile-social">
+                    <table class="table">
+                        <tr>
+                            <td><i class="fas fa-envelope"></i></td>
+                            <td colspan="2">
+                                <a href="mailto:asd@asd.com">asd@asd.com</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><i class="fab fa-facebook"></i></td>
+                            <td colspan="2">
+                                <a href="https://facebook.com/beo.hoang.395">Beo Hoang</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/static/img/Logo_Zalo.png" height="16px" alt="">
+                            </td>
+                            <td colspan="2">
+                                <a href="#" class="text-muted">Chưa kết nối</a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="mt-4 mb-2 text-center">
+                        <button class="btn text-muted text-small profile-edit">
+                            <small>
+                                <i class="fas fa-pen"></i>&nbsp;
+                                Edit
+                            </small>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-9">
+            <section class="my-4" style="height: 100%">
+                <ul class="nav nav-tabs" id="posts-section" role="tab-list">
+                    <li class="nav-item">
+                        <a href="#post-published" id="published-tab" class="nav-link active" data-toggle="tab"
+                            role="tab">
+                            Đã đăng&nbsp;
+                            <span class="badge badge-secondary">2</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#post-drafts" id="drafts-tab" class="nav-link" data-toggle="tab" role="tab">
+                            Nháp&nbsp;
+                            <span class="badge badge-secondary">1</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#post-pending" id="pending-tab" class="nav-link" data-toggle="tab" role="tab">
+                            Chờ duyệt&nbsp;
+                            <span class="badge">0</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content bg-light p-4" style="min-height: 100%">
+                    <div class="tab-pane fade show active" id="post-published" aria-labelledby="published-tab">
+                        {%- for post in site.posts -%}
+                        {%- if post.type == 'published' -%}
+                        {%- include post-landing.html post=post -%}
+                        {%- endif -%}
+                        {%- endfor -%}
+                    </div>
+                    <div class="tab-pane fade" id="post-drafts" aria-labelledby="drafts-tab">
+                        {%- for post in site.posts -%}
+                        {%- if post.type == 'draft' -%}
+                        {%- include post-landing.html post=post -%}
+                        {%- endif -%}
+                        {%- endfor -%}
+                    </div>
+                    <div class="tab-pane fade" id="post-pending" aria-labelledby="pending-tab">
+                        {%- for post in site.posts -%}
+                            {%- if post.type == 'pending' -%}
+                            {%- include post-landing.html post=post -%}
+                            {%- endif -%}
+                        {%- endfor -%}
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>

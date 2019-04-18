@@ -13,7 +13,7 @@ tags:
     - Salah
     - Mane
     - Bóng đá Anh
-
+type: published
 ---
 
 | ![Salah chia vui bàn thắng ấn định tỷ số. Ảnh: AP.](/static/img/liverpool-rong-cua-toi-ngoi-vo-dich-ngoai-hang-anh.png) |
