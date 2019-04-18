@@ -1,6 +1,7 @@
 {
     "version": 2,
     "name": "bao-dien-tu",
+    "alias": ["bao-dien-tu.beohoang98.now.sh"],
     "builds": [
         { "src": "_site/**/*", "use": "@now/static" }
     ],
