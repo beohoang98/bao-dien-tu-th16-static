@@ -12,6 +12,14 @@ collections:
     output: true
     permalink: /:categories/:slug/
 
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: Beo
+
 theme: minima
 
 plugins:

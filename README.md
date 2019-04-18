@@ -1,17 +1,30 @@
 # BÁO ĐIỆN TỬ TH-16 (web tĩnh)
 
 ## Preview
-`url`
+
+[Deploy on Now.sh](https://bao-dien-tu.beohoang98.now.sh)
 
 ## Run in localhost
 
-1. **Install**
-```bash
-npm install # or, yarn install
-# Then
-npm start # or, yarn start
+1. **Requirement**
 
-# Open in http://localhost:8081
+    - **Ruby**
+    ```bash
+    # Ubuntu
+    sudo apt install ruby-dev
+    ```
+
+    - **Jekyll and Bundler**
+    ```bash
+    gem install jekyll bundler
+    ```
+
+2. **First Install**
+```bash
+bundle install
 ```
 
-## Deploy
+3. **Run**
+```bash
+bundle exec jekyll serve
+```
