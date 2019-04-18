@@ -1,6 +1,6 @@
-yum install ruby23-devel.x86_64
+yum install ruby-dev
 
-gem install bundler
+gem install jekyll bundler
 
 bundle install
 
