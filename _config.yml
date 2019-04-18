@@ -11,3 +11,7 @@ collections:
   posts:
     output: true
     permalink: /:categories/:slug/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
