@@ -18,7 +18,8 @@
     
     <meta name="description" content="{{description}}">
     <meta property="og:description" content="{{page.description}}">
-    <meta property="og:url" content="{{site.url}}">
+    <meta property="og:url" content="{{site.url}}{{page.url}}">
+    <meta property="og:type" content="article">
     {%- if page.thumbnail -%}
         <meta property="og:image" content="{{site.url}}{{page.thumbnail}}">
     {%- else -%}
