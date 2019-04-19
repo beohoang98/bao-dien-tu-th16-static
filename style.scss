@@ -3,9 +3,13 @@
 
 @import "navbar";
 @import "login_button";
+@import "writer_ui";
+@import "premium_ui";
+@import "post";
 
 body {
   min-height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
 
 img {
