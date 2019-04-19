@@ -14,8 +14,10 @@ breadcrumb:
 
 <section class="d-flex flex-wrap justify-content-around">
     {%- for post in site.posts -%}
-    <article class="card m-2" style="width: 300px; max-width: 100%;">
-        <img src="{{post.thumbnail}}" alt="" class="card-img-top">
+    <article class="card m-2 post" style="width: 300px; max-width: 100%;">
+        <div class="post-thumb">
+            <img src="{{post.thumbnail}}" alt="" class="card-img-top">
+        </div>
         <div class="card-body">
             <h3 class="card-title">
                 <a href="{{post.url}}">{{post.title}}</a>
