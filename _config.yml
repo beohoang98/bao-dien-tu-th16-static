@@ -1,4 +1,3 @@
-theme: jekyll-theme-minimal
 title: Báo điện tử TH16
 description: Đồ án giữa kỳ Web CQ2016-33
 permalink: pretty
@@ -25,3 +24,26 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+browserify:
+
+  # target exts to convert
+  exts: [".js"]
+
+  # use installed 'browserify'
+  command: "./node_modules/.bin/browserify -"
+
+  # execute `npm install` on initialize if true
+  npm_install: false
+
+  # set nvm properties if you want to use with nvm installed automatically
+  nvm:
+
+    # required modules
+    modules: []
+
+    # browserify option string
+    option: "--exclude node_modules/**/* -o main.js"
+
+    # node version if you specify, or use '.nvmrc' if 'null'
+    node_version: null
