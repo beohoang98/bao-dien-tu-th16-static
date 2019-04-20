@@ -9,7 +9,7 @@ collections:
     permalink: /:name.html
   posts:
     output: true
-    permalink: /:categories/:slug/
+    permalink: /:categories/:title/
 
 defaults:
   - scope:
