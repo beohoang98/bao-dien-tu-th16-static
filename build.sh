@@ -4,4 +4,6 @@ gem install jekyll bundler
 
 bundle install
 
+jekyll clean
+
 jekyll build
