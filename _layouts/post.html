@@ -4,7 +4,7 @@ layout: default
 
 <div class="writer-ui">
     <div>
-        <a href="/writer/write" class="btn btn-primary">
+        <a href="{{ '/writer/write' | relative_url }}" class="btn btn-primary">
             <i class="fas fa-pen-square"></i>&nbsp;
             Chỉnh sửa
         </a>
@@ -13,7 +13,7 @@ layout: default
 
 <main class="post-layout container-fuild">
     <figure class="post-thumb">
-        <img src="{{page.thumbnail}}" alt="">
+        <img src="{{ page.thumbnail | relative_url }}" alt="">
     </figure>
 
     <section class="container">
@@ -37,7 +37,7 @@ layout: default
                             {%- assign cate_path = "" -%}
                             {%- for cate in page.categories -%}
                             {%- assign cate_path = cate_path | append: "/" | append: cate -%}
-                            <a href="{{cate_path}}" class="badge">{{cate}}</a>
+                            <a href="{{ cate_path | relative_url }}" class="badge">{{cate}}</a>
                             {%- endfor -%}
                         </div>
                     </div>
@@ -57,7 +57,7 @@ layout: default
                     <div class="post-tags text-secondary">
                         <strong>Tags</strong>
                         {%- for item in page.tags -%}
-                        <a class="mx-2" href="/tags/?name={{item | slugify}}">
+                        <a class="mx-2" href="{{ site.baseurl }}/tags/?name={{item | slugify}}">
                             <i class="fas fa-tag">{{item}}</i>&nbsp;
                         </a>
                         {%- endfor -%}
@@ -94,4 +94,4 @@ layout: default
     </section>
 </main>
 
-<script src="/static/post.js"></script>
+<script src="{{ '/static/post.js' | relative_url }}"></script>

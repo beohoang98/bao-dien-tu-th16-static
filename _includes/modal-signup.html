@@ -8,8 +8,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                <img width="100px" class="d-block mx-auto" src="/static/img/logo.png" alt="">
-                <form action="/profile" class="form" method="POST">
+                <img width="100px" class="d-block mx-auto" src="{{ '/static/img/logo.png' | relative_url}}" alt="">
+                <form action="{{ '/profile' | relative_url }}" class="form" method="POST">
                     <div class="form-group">
                         <label for="signup-email">Email</label>
                         <input type="email" name="signup-email" required class="form-control" id="signup-email">
@@ -47,7 +47,7 @@
                     </div>
                     <div class="col-md-4">
                         <button class="btn login-button-zalo">
-                            <img width="16px" src="/static/img/Logo_Zalo.png" alt="">
+                            <img width="16px" src="{{ '/static/img/Logo_Zalo.png' | relative_url}}" alt="">
                             Zalo
                         </button>
                     </div>

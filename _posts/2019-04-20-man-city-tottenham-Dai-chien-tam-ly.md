@@ -20,7 +20,7 @@ tags:
 
 Ngã ngựa trước Tottenham ở tứ kết Champions League giữa tuần qua khiến cầu thủ Man City suy sụp. Sau khi VAR từ chối bàn thắng của Raheem Sterling ở phút bù giờ hiệp hai, Ilkay Gundogan gục xuống khóc. Guardiola sẽ muốn học trò nuốt nước mắt vào trong để trở lại cuộc đua vô địch Ngoại hạng Anh - nơi họ có quyền tự quyết. Chỉ có ba điểm mới giúp Man City chiếm ưu thế trước Liverpool. Nếu không, giấc mộng "ăn bốn" có thể tan vỡ và biến thành mùa giải thất bát chỉ trong vòng ba ngày.
 
-| ![Aguero (số 10) và đồng đội cần nhanh chóng gượng dậy để bảo vệ chức vô địch Ngoại hạng Anh.](/static/img/aguero-1555739897-1555739907-9693-1555740076.png) |
+| ![Aguero (số 10) và đồng đội cần nhanh chóng gượng dậy để bảo vệ chức vô địch Ngoại hạng Anh.]({{site.baseurl}}/static/img/aguero-1555739897-1555739907-9693-1555740076.png) |
 |:---:|
 |Aguero (số 10) và đồng đội cần nhanh chóng gượng dậy để bảo vệ chức vô địch Ngoại hạng Anh.|
 
@@ -32,7 +32,7 @@ Lý do khác giúp Man City ở thế cửa trên là phong độ ở Ngoại h�
 
 **Nếu Guardiola cần truyền cảm hứng cho học trò, ông có thể viện dẫn Arsenal ở mùa giải bất bại 2003-2004.** Họ lần lượt bị Man Utd và Chelsea loại khỏi bán kết Cup FA và tứ kết Champions League trong vòng ba ngày. Thầy trò Arsene Wenger gượng dậy ngay lập tức để hạ Liverpool 4-2 ở trận tiếp theo, giữ mạch bất bại tại Ngoại hạng Anh.
 
-| ![Tottenham cũng phải trở lại mặt đất.](/static/img/tottenham-1555740017-155574003-9280-1196-1555740077.png) |
+| ![Tottenham cũng phải trở lại mặt đất.]({{site.baseurl}}/static/img/tottenham-1555740017-155574003-9280-1196-1555740077.png) |
 |:---:|
 |Tottenham cũng phải trở lại mặt đất.|
 

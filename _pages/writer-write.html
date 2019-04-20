@@ -2,14 +2,15 @@
 layout: default
 permalink: /writer/write/
 title: Viết bài
-include_head: >-
-    <link rel="stylesheet" href="/static/quill/quill.core.css">
-    <link rel="stylesheet" href="/static/quill/quill.snow.css">
-    <link rel="stylesheet" href="/static/tagify/dist/tagify.css">
-    <script src="/static/quill/quill.min.js"></script>
-    <script src="/static/tagify/dist/jQuery.tagify.min.js"></script>
-    <link rel="stylesheet" href="/static/writer.css">
+include_head:
 ---
+<link rel="stylesheet" href="{{ '/static/quill/quill.core.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/static/quill/quill.snow.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/static/tagify/dist/tagify.css' | relative_url }}">
+<script src="{{ '/static/quill/quill.min.js' | relative_url }}"></script>
+<script src="{{ '/static/tagify/dist/jQuery.tagify.min.js' | relative_url }}"></script>
+<link rel="stylesheet" href="{{ '/static/writer.css' | relative_url }}">
+
 <main class="container-fluid bg-secondary" style="min-height: 100vh">
     <section class="container py-4" style="min-height: 100%">
         <section class="write-info p-4 mb-4 rounded shadow bg-light">
@@ -108,4 +109,4 @@ include_head: >-
     </section>
 </main>
 
-<script src="/static/writer.js"></script>
+<script src="{{ '/static/writer.js' | relative_url }}"></script>

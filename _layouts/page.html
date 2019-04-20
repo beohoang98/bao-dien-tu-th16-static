@@ -10,7 +10,7 @@ layout: default
             </a>
         </li>
         {%- for item in page.breadcrumb -%}
-            <li class="breadcrumb-item"><a href="{{item.url}}">{{item.title}}</a></li>
+            <li class="breadcrumb-item"><a href="{{ item.url | relative_url }}">{{item.title}}</a></li>
         {%- endfor -%}
     </ul>
 </div>

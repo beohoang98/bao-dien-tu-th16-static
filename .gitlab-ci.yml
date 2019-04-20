@@ -6,7 +6,7 @@ variables:
 pages:
   script:
   - bundle install
-  - bundle exec jekyll build -d public
+  - bundle exec jekyll build -d public --baseurl="/bao-dien-tu-static"
   artifacts:
     paths:
     - public
