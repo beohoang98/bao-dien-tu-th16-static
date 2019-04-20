@@ -1,3 +1,0 @@
-[submodule "static/quilljs"]
-	path = static/quilljs
-	url = https://github.com/quilljs/quill.git
