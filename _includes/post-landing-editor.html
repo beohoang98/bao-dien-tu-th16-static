@@ -1,0 +1,49 @@
+{%- assign post = include.post -%}
+
+<link rel="stylesheet" href="/static/post.css">
+<article class="post-landing d-flex my-4 shadow">
+  <div class="col-md-3 m-0 p-0">
+    <!-- <div class="post-thumb">
+      <img src="{{ post.thumbnail }}" alt="{{post.title}}" height="100%">
+    </div> -->
+    <a class="post-thumb" href="{{post.url}}">
+      <img src="{{ post.thumbnail }}" alt="{{post.title}}" height="100%">
+    </a>
+  </div>
+  <div class="col-md-8 p-4 d-flex flex-column justify-content-between">
+    <a href="{{post.url}}" class="font-weight-bold">{{post.title}}</a>
+    <p class="card-subtitle">{{post.description}}</p>
+    <div>
+        <header>Tag:
+            <span>
+                <ul class="tag-news">
+                    {%- for tag in include.post.tags -%}
+                    <li><a href="#" class='badge badge-primary'>{{tag}}</a></li>
+                    {%- endfor -%}
+                </ul>
+            </span>
+        </header>
+    </div>
+  </div>
+  <div class="col-md-1 mb-3 p-0 d-flex flex-column justify-content-end">
+    <div class="dropdown dropleft">
+      <a href="#" id="menu-{{post.slug}}" role="button" 
+          aria-expanded="false"
+          data-toggle="dropdown">
+          <i class="fas fa-ellipsis-v"></i>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="menu-{{post.slug}}">
+          {%- if post.type != 'pending' -%}
+          <a href="#" class="dropdown-item">Chuyển sang chờ duyệt</a>
+          {%- endif -%}
+          {%- if post.type != 'published' -%}
+          <a href="#" class="dropdown-item">Chuyển sang đã duyệt</a>
+          {%- endif -%}
+          {%- if post.type != 'reject' -%}
+          <a href="#" class="dropdown-item">Chuyển sang từ chối</a>
+          {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+</article>
