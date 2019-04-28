@@ -44,6 +44,7 @@
 <body>
     {%- include navbar.html -%}
     {{- content -}}
+    {%- include footer.html -%}
 
     {%- include modal-login.html -%}
     {%- include modal-signup.html -%}
@@ -51,5 +52,9 @@
     {%- include modal-reject-detail.html-%}
 
     <script src="/static/default.js"></script>
+
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=235849373946738&autoLogAppEvents=1"></script>
 </body>
 </html>

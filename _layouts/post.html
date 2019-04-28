@@ -42,17 +42,17 @@ layout: default
                         </div>
                     </div>
                     {%- if page.premium -%}
-                        {%- assign post_content_class = 'is-premium' -%}
+                    {%- assign post_content_class = 'is-premium' -%}
                     {%- endif -%}
                     <div class="post-content {{post_content_class}}">
                         {{- page.content -}}
                     </div>
                     {%- if page.premium -%}
-                        <div class="premium-overlay d-flex justify-content-center align-items-center">
-                            <div class="bg-light text-center">
-                                <h1>Bạn phải có tài khoản premium mới xem được bài viết này</h1>
-                            </div>
+                    <div class="premium-overlay d-flex justify-content-center align-items-center">
+                        <div class="bg-light text-center">
+                            <h1>Bạn phải có tài khoản premium mới xem được bài viết này</h1>
                         </div>
+                    </div>
                     {%- endif -%}
                     <div class="post-tags text-secondary">
                         <strong>Tags</strong>
@@ -63,6 +63,20 @@ layout: default
                         {%- endfor -%}
                     </div>
                 </section>
+
+                <!-- SHARE   -->
+                <div class="my-2">
+                    <hr>
+                    <div class="fb-like" data-href="{{site.url}}{{page.url}}" data-width="" data-layout="standard"
+                        data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+                </div>
+
+                <!-- COMMENTS -->
+                <div class="my-2">
+                    <hr>
+                    <div style="width: 100%" class="fb-comments" data-href="{{site.url}}{{page.url}}" data-width="100%"
+                        data-numposts="5"></div>
+                </div>
             </div>
             <div class="col-lg-3">
                 <div class="sticky-top" style="top: 70px; z-index: 99;">
@@ -91,6 +105,7 @@ layout: default
                 </div>
             </div>
         </div>
+
     </section>
 </main>
 
