@@ -3,9 +3,6 @@
 <link rel="stylesheet" href="/static/post.css">
 <article class="post-landing d-flex my-4 shadow">
   <div class="col-md-3 m-0 p-0">
-    <!-- <div class="post-thumb">
-      <img src="{{ post.thumbnail }}" alt="{{post.title}}" height="100%">
-    </div> -->
     <a class="post-thumb" href="{{post.url}}">
       <img src="{{ post.thumbnail }}" alt="{{post.title}}" height="100%">
     </a>
@@ -37,13 +34,12 @@
           <a href="#" class="dropdown-item">Chuyển sang chờ duyệt</a>
           {%- endif -%}
           {%- if post.type != 'published' -%}
-          <a href="#" class="dropdown-item">Chuyển sang đã duyệt</a>
+          <a href="#" data-toggle="modal" data-target="#modal-update-post" class="dropdown-item">Chuyển sang đã duyệt</a>
           {%- endif -%}
           {%- if post.type != 'reject' -%}
-          <a href="#" class="dropdown-item">Chuyển sang từ chối</a>
+          <a href="#" data-toggle="modal" data-target="#modal-reject-detail" class="dropdown-item">Chuyển sang từ chối</a>
           {%- endif -%}
       </div>
     </div>
   </div>
-
 </article>
