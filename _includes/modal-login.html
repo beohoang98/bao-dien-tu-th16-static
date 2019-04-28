@@ -13,7 +13,7 @@
                         <img width="200px" src="{{ '/static/img/logo.png' | relative_url }}" alt="">
                     </div>
                     <div class="col-md-6">
-                        <form action="{{ '/profile' | relative_url }}" class="form" method="POST" enctype="multipart/form-data">
+                        <form action="{{ '/profile/' | relative_url }}" class="form" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="login-email">Email</label>
                                 <input type="email" name="email" required
