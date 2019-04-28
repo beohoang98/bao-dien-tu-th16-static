@@ -1,7 +1,7 @@
 ---
 title: "Man City - Tottenham: Đại chiến tâm lý"
 description: Sau màn đối đầu nảy lửa tại Champions League, hai đội cần nhanh chóng lấy lại tinh thần khi tái ngộ trên sân Etihad, vòng 35 Ngoại hạng Anh.
-date: 20/4/2019, 14:10 (GMT+7)
+date: 20/4/2019, 11:10 (GMT+7)
 type: published
 thumbnail: /static/img/aguero-1555739897-1555739907-9693-1555740076.png
 premium: true

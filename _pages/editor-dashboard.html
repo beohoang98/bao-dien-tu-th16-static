@@ -1,0 +1,46 @@
+---
+layout: default
+title: Editor Dashboard
+permalink: /editor/
+---
+<link rel="stylesheet" href="/static/profile.css">
+<main class="container-fluid" >
+  <div class="d-flex flex-column" style="height:inherit">
+    <div class="col-lg-9">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a href="#post-pending" class="nav-link active" id="pending-tab" data-toggle="tab" aria-controls="pending-tab" aria-selected="true">Chờ duyệt&nbsp;<span class="badge badge-primary">2</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#post-published" class="nav-link" id="published-tab" data-toggle="tab" aria-controls="published-tab" aria-selected="false">Đã duyệt&nbsp;<span class="badge badge-primary">2</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#post-reject" class="nav-link" id="reject-tab" data-toggle="tab" aria-controls="reject-tab" aria-selected="false">Từ chối&nbsp;<span class="badge badge-primary">2</span></a>
+        </li>
+      </ul>
+      <div class="tab-content bg-light p-4">
+          <div class="tab-pane fade show active" role="tabpanel" id="post-pending" aria-labelledby="pending-tab">
+              {%- for post in site.posts -%}
+              {%- if post.type == 'pending' -%}
+              {%- include post-landing-editor.html post=post -%}
+              {%- endif -%}
+              {%- endfor -%}
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="post-published" aria-labelledby="published-tab">
+                {%- for post in site.posts -%}
+                {%- if post.type == 'published' -%}
+                {%- include post-landing-editor.html post=post -%}
+                {%- endif -%}
+                {%- endfor -%}
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="post-reject" aria-labelledby="reject-tab">
+                {%- for post in site.posts -%}
+                {%- if post.type == 'reject' -%}
+                {%- include post-landing-editor.html post=post -%}
+                {%- endif -%}
+                {%- endfor -%}
+            </div>
+      </div>
+    </div>
+  </div>
+</main>
