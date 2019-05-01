@@ -12,6 +12,16 @@ collections:
     output: true
     permalink: /:categories/:title/
 
+jekyll-archives:
+  enabled: [category, tag]
+  layout: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+
 defaults:
   - scope:
       path: ""

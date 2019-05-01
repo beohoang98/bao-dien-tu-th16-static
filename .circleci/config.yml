@@ -29,11 +29,11 @@ jobs:
           command: cd ~/repo && ls -al # for debug
       - restore_cache:
             keys:
-              - rubygems-v1-{{ checksum "Gemfile.lock" }}
+              - rubygems-v1-{{ checksum "Gemfile" }}
               - rubygems-v1-fallback
       - run: bundle install --path $BUNDLE_PATH
       - save_cache:
-          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+          key: rubygems-v1-{{ checksum "Gemfile" }}
           paths:
             - vendor/bundle
       - run: bundle exec jekyll build
