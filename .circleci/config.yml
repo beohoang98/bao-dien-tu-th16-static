@@ -43,7 +43,7 @@ jobs:
             git config user.name 'Beo Hoang'
             git config user.email 'beohoang98@noreply.users.github.com'
             git add -A .
-            git commit -m Deploy-to-GitHub-Pages-${CI_COMMIT_ID} --skip-ci --allow-empty
+            git commit -m Deploy-to-GitHub-Pages-${CI_COMMIT_ID} --allow-empty
             git subtree push --force --prefix=_site gh-pages
 workflows:
   version: 2
