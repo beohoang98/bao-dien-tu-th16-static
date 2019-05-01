@@ -45,7 +45,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
+            - "35:50:e2:dc:08:87:b3:36:d1:d0:a5:5c:d6:47:a1:1f"
       - run: git clone git@github.com:beohoang98/bao-dien-tu-th16-static.git out
       - run: cd out
       - restore_cache:
