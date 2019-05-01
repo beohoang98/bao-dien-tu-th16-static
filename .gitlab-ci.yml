@@ -1,0 +1,14 @@
+image: ruby:2.5
+
+variables:
+  JEKYLL_ENV: production
+
+pages:
+  script:
+  - bundle install
+  - bundle exec jekyll build -d public --baseurl="/bao-dien-tu-static"
+  artifacts:
+    paths:
+    - public
+  only:
+  - master

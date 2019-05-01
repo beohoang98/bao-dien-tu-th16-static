@@ -14,11 +14,11 @@ title: Tags
 <article class="{{className}} my-4 d-none">
     <div class="row">
         <div class="col-sm-3">
-            <img class="img-fluid" src="{{ post.thumbnail }}" alt="" />
+            <img class="img-fluid" src="{{ post.thumbnail | relative_url }}" alt="" />
         </div>
         <div class="col-sm-9">
             <h3>
-                <a href="{{post.url}}">
+                <a href="{{post.url | relative_url}}">
                     {{post.title}}
                 </a>
             </h3>

@@ -4,13 +4,10 @@
     "alias": [
         "bao-dien-tu.beohoang98.now.sh"
     ],
-    "builds": [
+    "routes": [
         {
-            "src": "build.sh",
-            "use": "@now/static-build",
-            "config": {
-                "distDir": "_site"
-            }
+            "src": "/(.*)",
+            "dest": "https://beohoang98.github.io/bao-dien-tu-th16-static/$1"
         }
     ]
 }

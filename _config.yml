@@ -1,15 +1,16 @@
 title: Báo điện tử TH16
 description: Đồ án giữa kỳ Web CQ2016-33
 permalink: pretty
-url: https://bao-dien-tu.beohoang98.now.sh
+url: https://beohoang98.gitlab.io/bao-dien-tu-static
+baseurl: ""
 
 collections:
   pages:
     output: true
-    permalink: /:slug/
+    permalink: /:name/
   posts:
     output: true
-    permalink: /:categories/:slug/
+    permalink: /:categories/:title/
 
 defaults:
   - scope:
@@ -24,26 +25,4 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-
-browserify:
-
-  # target exts to convert
-  exts: [".js"]
-
-  # use installed 'browserify'
-  command: "./node_modules/.bin/browserify -"
-
-  # execute `npm install` on initialize if true
-  npm_install: false
-
-  # set nvm properties if you want to use with nvm installed automatically
-  nvm:
-
-    # required modules
-    modules: []
-
-    # browserify option string
-    option: "--exclude node_modules/**/* -o main.js"
-
-    # node version if you specify, or use '.nvmrc' if 'null'
-    node_version: null
+  - jekyll-archives
