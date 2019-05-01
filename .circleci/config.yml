@@ -9,7 +9,7 @@ jobs:
     docker:
       - image: circleci/ruby:2.5
     environment:
-      BUNDLE_PATH: ~/repo/vendor/bundle
+      BUNDLE_PATH: ~/repo/out/vendor/bundle
     steps:
       - attach_workspace:
           at: ~/repo/out
@@ -23,7 +23,7 @@ jobs:
             keys:
               - rubygems-v1-{{ checksum "Gemfile.lock" }}
               - rubygems-v1-fallback
-      - run: bundle install --path $BUNDLE_PATH
+      - run: bundle check || bundle install
       - save_cache:
           key: rubygems-v1-{{ checksum "Gemfile.lock" }}
           paths:
