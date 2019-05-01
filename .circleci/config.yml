@@ -11,13 +11,13 @@ jobs:
     environment:
       BUNDLE_PATH: ~/repo/out/vendor/bundle
     steps:
-      - attach_workspace:
-          at: ~/repo/out
       - add_ssh_keys:
           fingerprints:
             - "86:2d:80:37:20:2b:21:91:18:bc:61:dc:9f:14:21:22"
       - run: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - run: git clone git@github.com:beohoang98/bao-dien-tu-th16-static.git ~/repos
+      - attach_workspace:
+          at: ~/repo
       - restore_cache:
             keys:
               - rubygems-v1-{{ checksum "Gemfile.lock" }}
@@ -27,6 +27,7 @@ jobs:
           key: rubygems-v1-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
+      - run: ls -al # for debug
       - run: bundle exec jekyll build
       - run: git checkout gh-pages || git checkout --orphan gh-pages
       - run: "git config user.name 'Beo Hoang'"
