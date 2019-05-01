@@ -7,7 +7,7 @@ jobs:
   deploy:
     <<: *defaults
     docker:
-      - image: circleci/ruby:2.5
+      - image: starefossen/ruby-node
     environment:
       BUNDLE_PATH: ~/repo/vendor/bundle
     steps:
@@ -29,22 +29,26 @@ jobs:
           command: cd ~/repo && ls -al # for debug
       - restore_cache:
             keys:
+              - node-v1-{{ checksum "package.json" }}
               - rubygems-v1-{{ checksum "Gemfile" }}
               - rubygems-v1-fallback
       - run: bundle install --path $BUNDLE_PATH
+      - run: npm install
       - save_cache:
           key: rubygems-v1-{{ checksum "Gemfile" }}
           paths:
             - vendor/bundle
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}
+          paths:
+            - node_modules
       - run: bundle exec jekyll build
       - run:
           name: Deploy Github Pages
           command: |
             git config user.name 'Beo Hoang'
             git config user.email 'beohoang98@noreply.users.github.com'
-            git add -A .
-            git commit -m Deploy-to-GitHub-Pages-${CI_COMMIT_ID} --allow-empty
-            git subtree push --prefix=_site origin gh-pages
+            npm run deploy
 workflows:
   version: 2
   test-deploy:
