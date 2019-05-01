@@ -9,34 +9,34 @@ jobs:
     docker:
       - image: circleci/ruby:2.5
     environment:
-      BUNDLE_PATH: ~/repo/out/vendor/bundle
+      BUNDLE_PATH: ~/repo/vendor/bundle
     steps:
       - add_ssh_keys:
           fingerprints:
             - "86:2d:80:37:20:2b:21:91:18:bc:61:dc:9f:14:21:22"
       - run: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-      - run: git clone git@github.com:beohoang98/bao-dien-tu-th16-static.git ~/repos
+      - run: git clone git@github.com:beohoang98/bao-dien-tu-th16-static.git ~/repo
       - attach_workspace:
           at: ~/repo
+      - run:
+          name: Check folder
+          command: cd ~/repo && ls -al # for debug
       - restore_cache:
             keys:
               - rubygems-v1-{{ checksum "Gemfile.lock" }}
               - rubygems-v1-fallback
-      - run: bundle check || bundle install
+      - run: bundle install --path $BUNDLE_PATH
       - save_cache:
           key: rubygems-v1-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
-      - run:
-          name: Check folder
-          command: ls -al # for debug
       - run: bundle exec jekyll build
       - run: git checkout gh-pages || git checkout --orphan gh-pages
       - run: "git config user.name 'Beo Hoang'"
       - run: "git config user.email 'beohoang98@noreply.users.github.com'"
       - run: cd _site
       - run: git add -A .
-      - run: "git commit -m 'Deploy to GitHub Pages: ${CI_COMMIT_ID} --skip-ci'"
+      - run: git commit -m 'Deploy to GitHub Pages ${CI_COMMIT_ID} --skip-ci'
       - run: git push origin gh-pages
 workflows:
   version: 2
