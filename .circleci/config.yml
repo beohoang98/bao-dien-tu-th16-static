@@ -18,7 +18,7 @@ jobs:
             - rubygems-v1-fallback
       - run:
           name: Bundle Install
-          command: bundle check || bundle install
+          command: bundle install --path vendor/bundle
       - save_cache:
           key: rubygems-v1-{{ checksum "Gemfile.lock" }}
           paths:
@@ -43,8 +43,18 @@ jobs:
     docker:
       - image: circleci/ruby:2.5
     steps:
-      - attach_workspace:
-          at: ./
+      - run: git clone git@github.com:beohoang98/bao-dien-tu-th16-static.git out
+      - run: cd out
+      - restore_cache:
+            keys:
+              - rubygems-v1-{{ checksum "Gemfile.lock" }}
+              - rubygems-v1-fallback
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run: bundle exec jekyll build
       - run: git checkout gh-pages || git checkout --orphan gh-pages
       - run: "git config user.name 'Beo Hoang'"
       - run: "git config user.email 'beohoang98@noreply.users.github.com'"
@@ -56,10 +66,7 @@ workflows:
   version: 2
   test-deploy:
     jobs:
-      - build
       - deploy:
-          requires:
-            - build
           filters:
             branches:
               only: master
