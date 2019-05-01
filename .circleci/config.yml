@@ -43,7 +43,9 @@ jobs:
     docker:
       - image: circleci/ruby:2.5
     steps:
-      - run: 'echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config'
+      - add_ssh_keys:
+          fingerprints:
+            - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
       - run: git clone git@github.com:beohoang98/bao-dien-tu-th16-static.git out
       - run: cd out
       - restore_cache:
