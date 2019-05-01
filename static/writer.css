@@ -1,0 +1,40 @@
+@charset "UTF-8";
+#editor {
+  font-size: 20px;
+  min-height: 500px; }
+  #editor .ql-video {
+    width: 100%;
+    max-width: 500px !important;
+    height: 300px;
+    object-fit: cover;
+    margin: 0 auto; }
+  #editor img {
+    display: block;
+    margin: 1em auto; }
+
+.write-thumb {
+  max-width: 100%;
+  width: 500px;
+  height: 300px;
+  background-color: #ccc;
+  border: 2px dashed #333;
+  margin: 0 auto; }
+  .write-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.custom-file {
+  max-width: 500px; }
+
+#save::before {
+  content: "Lưu"; }
+#save.saved {
+  background-color: green;
+  color: white; }
+  #save.saved::before {
+    content: "Đã lưu"; }
+#save [role=status] {
+  display: none; }
+#save.onsave [role=status] {
+  display: block; }

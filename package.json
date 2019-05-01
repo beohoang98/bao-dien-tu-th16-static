@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ws --port=8081",
-    "serve": "bundle exec jekyll serve --incremental"
+    "serve": "bundle exec jekyll serve --incremental",
+    "deploy": "gh-pages -d _site"
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,11 @@
   },
   "homepage": "https://github.com/beohoang98/bao-dien-tu-th16-static#readme",
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "local-web-server": "^2.6.1",
     "npm-run-all": "^4.1.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
