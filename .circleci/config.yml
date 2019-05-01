@@ -23,7 +23,7 @@ jobs:
             keys:
               - rubygems-v1-{{ checksum "Gemfile.lock" }}
               - rubygems-v1-fallback
-      - run: bundle install --path BUNDLE_PATH
+      - run: bundle install --path $BUNDLE_PATH
       - save_cache:
           key: rubygems-v1-{{ checksum "Gemfile.lock" }}
           paths:
