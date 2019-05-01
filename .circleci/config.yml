@@ -11,6 +11,12 @@ jobs:
     environment:
       BUNDLE_PATH: ~/repo/vendor/bundle
     steps:
+      - run:
+            name: Configure Bundler
+            command: |
+              echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+              source $BASH_ENV
+              gem install bundler
       - add_ssh_keys:
           fingerprints:
             - "86:2d:80:37:20:2b:21:91:18:bc:61:dc:9f:14:21:22"
@@ -32,12 +38,15 @@ jobs:
             - vendor/bundle
       - run: bundle exec jekyll build
       - run: git checkout gh-pages || git checkout --orphan gh-pages
-      - run: "git config user.name 'Beo Hoang'"
-      - run: "git config user.email 'beohoang98@noreply.users.github.com'"
-      - run: cd _site
-      - run: git add -A .
-      - run: git commit -m 'Deploy to GitHub Pages ${CI_COMMIT_ID} --skip-ci'
-      - run: git push --force origin gh-pages
+      - run:
+          name: Deploy Github Pages
+          command: |
+            git config user.name 'Beo Hoang'
+            git config user.email 'beohoang98@noreply.users.github.com'
+            cd _site
+            git add -A .
+            git commit -m "Deploy to GitHub Pages $CI_COMMIT_ID --skip-ci"
+            git push --force origin gh-pages
 workflows:
   version: 2
   test-deploy:
