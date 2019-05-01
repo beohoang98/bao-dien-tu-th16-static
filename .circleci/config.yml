@@ -12,7 +12,7 @@ jobs:
       BUNDLE_PATH: ~/repo/vendor/bundle
     steps:
       - attach_workspace:
-          at: ~/repo
+          at: ~/repo/out
       - add_ssh_keys:
           fingerprints:
             - "86:2d:80:37:20:2b:21:91:18:bc:61:dc:9f:14:21:22"
