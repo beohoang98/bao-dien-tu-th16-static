@@ -18,6 +18,9 @@ jobs:
       - run: git clone git@github.com:beohoang98/bao-dien-tu-th16-static.git ~/repos
       - attach_workspace:
           at: ~/repo
+      - run:
+          name: Check folder
+          command: ls -al # for debug
       - restore_cache:
             keys:
               - rubygems-v1-{{ checksum "Gemfile.lock" }}
@@ -27,9 +30,6 @@ jobs:
           key: rubygems-v1-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
-      - run:
-          name: Check folder
-          command: ls -al # for debug
       - run: bundle exec jekyll build
       - run: git checkout gh-pages || git checkout --orphan gh-pages
       - run: "git config user.name 'Beo Hoang'"
