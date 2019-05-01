@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="theme_header container">
+    <ul class="breadcrumb left">
+        <li class="breadcrumb-item">
+            <a href="/">
+                <i class="fas fa-home"></i>&nbsp;
+                Trang chủ
+            </a>
+        </li>
+        {%- for item in page.breadcrumb -%}
+            <li class="breadcrumb-item"><a href="{{ item.url | relative_url }}">{{item.title}}</a></li>
+        {%- endfor -%}
+    </ul>
+</div>
+<main class="container">
+    <div class="hero">
+        <h1>{{page.title}}</h1>
+    </div>
+    {{- content -}}
+</main>

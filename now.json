@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "name": "bao-dien-tu",
+    "alias": [
+        "bao-dien-tu.beohoang98.now.sh"
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "https://beohoang98.github.io/bao-dien-tu-th16-static/$1"
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+<div class="modal fade" role="dialog" id="modal-login">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="modal-title">Đăng nhập</h5>
+                <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex flex-row-reverse flex-wrap">
+                    <div class="col-md-6 text-center">
+                        <img width="200px" src="{{ '/static/img/logo.png' | relative_url }}" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <form action="{{ '/profile/' | relative_url }}" class="form" method="POST" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="login-email">Email</label>
+                                <input type="email" name="email" required
+                                    class="form-control"
+                                    id="login-email">
+                            </div>
+                            <div class="form-group">
+                                <label for="login-pass">Mật khẩu</label>
+                                <input type="password" name="pass" required
+                                    class="form-control"
+                                    id="login-pass">
+                            </div>
+                            <button class="d-block btn btn-info mx-auto">
+                                Đăng nhập <i class="fas fa-sign-in-alt"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-secondary">hoặc</h3>
+                </div>
+                <div class="d-flex">
+                    <div class="col-md-4">
+                        <button class="btn login-button-facebook">
+                            <i class="fab fa-facebook"></i>&nbsp;
+                            Facebook
+                        </button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn login-button-google">
+                            <i class="fab fa-google"></i>&nbsp;
+                            Google
+                        </button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn login-button-zalo">
+                            <img width="16px" src="{{ '/static/img/Logo_Zalo.png' | relative_url }}" alt="">
+                            Zalo
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="{{ '/forget-password' | relative_url }}" class="mr-auto">Quên mật khẩu</a>
+                <a href="#" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modal-signup" class="link">
+                    Đăng ký tài khoản
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

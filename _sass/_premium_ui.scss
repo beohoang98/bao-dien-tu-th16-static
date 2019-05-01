@@ -1,0 +1,21 @@
+.is-premium {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    filter: blur(10px);
+}
+
+.premium-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    > div {
+        width: 300px;
+    }
+}
+
+.premium-ui {
+    display: none;
+}

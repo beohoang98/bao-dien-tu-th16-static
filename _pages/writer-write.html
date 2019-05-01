@@ -1,0 +1,112 @@
+---
+layout: default
+permalink: /writer/write/
+title: Viết bài
+include_head:
+---
+<link rel="stylesheet" href="{{ '/static/quill/quill.core.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/static/quill/quill.snow.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/static/tagify/dist/tagify.css' | relative_url }}">
+<script src="{{ '/static/quill/quill.min.js' | relative_url }}"></script>
+<script src="{{ '/static/tagify/dist/jQuery.tagify.min.js' | relative_url }}"></script>
+<link rel="stylesheet" href="{{ '/static/writer.css' | relative_url }}">
+
+<main class="container-fluid bg-secondary" style="min-height: 100vh">
+    <section class="container py-4" style="min-height: 100%">
+        <section class="write-info p-4 mb-4 rounded shadow bg-light">
+            <form action="#" class="form">
+                <div class="form-group">
+                    <label for="write-title">Tiêu đề <span class="text-danger">*</span></label>
+                    <input type="text" minlength="10" class="form-control" required name="title" id="write-title" placeholder="Tiêu đề...">
+                </div>
+                <div class="form-group">
+                    <label for="write-des">Mô tả ngắn</label>
+                    <textarea rows="3"  class="form-control" name="description" id="write-des"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="write-category">Chuyên mục <span class="text-danger">*</span></label>
+                            <select class="custom-select" name="categories" required id="write-category">
+                                <option value="cong-nghe">Công nghệ</option>
+                                <option value="cong-nghe,startup">&emsp;Startup</option>
+                                <option value="cong-nghe,smartphone">&emsp;Smartphone</option>
+                                <option value="the-thao">Thể thao</option>
+                                <option value="the-thao,bd-anh">&emsp;Bóng đá Anh</option>
+                                <option value="the-thao,bd-viet-nam">&emsp;Bóng đá Việt Nam</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="write-tags">Thẻ</label>
+                            <input type="hidden" name="tags" id="write-tags">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group d-flex flex-column align-items-center">
+                    <div class="write-thumb">
+                        <img src="" alt="">
+                    </div>
+                    <div class="custom-file">
+                        <label class="custom-file-label" for="write-thumb">Ảnh bìa
+                            <span class="text-danger">*</span>
+                        </label>
+                        <input required type="file" class="custom-file-input" accept="image/*" name="thumb" id="write-thumb">
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="bg-light position-sticky" style="top: 60px; z-index: 999">
+            <div id="toolbar">
+                <div class="ql-formats">
+                    <select name="" id="" class="ql-font"></select>
+                    <select class="ql-size">
+                        <option value="small"></option>
+                        <!-- Note a missing, thus falsy value, is used to reset to default -->
+                        <option selected></option>
+                        <option value="large"></option>
+                        <option value="huge"></option>
+                    </select>
+                </div>
+
+                <!-- Add a bold button -->
+                <div class="ql-formats">
+                    <button class="ql-bold"></button>
+                    <button class="ql-italic"></button>
+                    <button class="ql-underline"></button>
+                    <button class="ql-strike"></button>
+                </div>
+
+                <div class="ql-formats">
+                    <select  class="ql-align"></select>
+                </div>
+
+                <!-- Add subscript and superscript buttons -->
+                <div class="ql-formats">
+                    <button class="ql-script" value="sub"></button>
+                    <button class="ql-script" value="super"></button>
+                </div>
+
+                <div class="ql-formats">
+                    <button class="ql-image"></button>
+                    <button class="ql-video"></button>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light shadow">
+
+            <div id="editor"></div>
+        </section>
+        <section class="rounded p-2 my-4 position-sticky" style="bottom: 1em">
+            <div class="btn-group">
+                <button class="btn btn-secondary shadow disabled">Publish</button>
+                <div class="d-flex align-items-center btn btn-info shadow" id="save" role="button">
+                    <div class="spinner-border" role="status"></div>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+
+<script src="{{ '/static/writer.js' | relative_url }}"></script>

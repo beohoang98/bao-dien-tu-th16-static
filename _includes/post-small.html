@@ -1,0 +1,9 @@
+{%- assign post = include.post -%}
+<a href="{{post.url | relative_url }}" class="d-block post-small">
+    <div class="post-thumb">
+        <img src="{{post.thumbnail | relative_url}}" alt="">
+    </div>
+    <div class="post-info">
+        <div><strong>{{post.title}}</strong></div>
+    </div>
+</a>

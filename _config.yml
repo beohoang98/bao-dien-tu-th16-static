@@ -1,0 +1,28 @@
+title: Báo điện tử TH16
+description: Đồ án giữa kỳ Web CQ2016-33
+permalink: pretty
+url: https://beohoang98.gitlab.io/bao-dien-tu-static
+baseurl: ""
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+  posts:
+    output: true
+    permalink: /:categories/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: Beo
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-archives
