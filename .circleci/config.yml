@@ -42,7 +42,4 @@ workflows:
   version: 2
   test-deploy:
     jobs:
-      - deploy:
-          filters:
-            branches:
-              only: master
+      - deploy
