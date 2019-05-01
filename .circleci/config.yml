@@ -47,8 +47,8 @@ jobs:
           at: ./_site
       - run:
           - git checkout gh-pages || git checkout --orphan gh-pages
-          - git config user.name "Beo Hoang"
-          - git config user.email "beohoang98@noreply.users.github.com
+          - "git config user.name 'Beo Hoang'"
+          - "git config user.email 'beohoang98@noreply.users.github.com'"
           - git add -A .
           - "git commit -m 'Deploy to GitHub Pages: ${CI_COMMIT_ID} --skip-ci'"
           - git push origin gh-pages
