@@ -36,10 +36,13 @@ jobs:
       - run: "git config user.email 'beohoang98@noreply.users.github.com'"
       - run: cd _site
       - run: git add -A .
-      - run: "git commit -m 'Deploy to GitHub Pages: ${CI_COMMIT_ID} --skip-ci'"
+      - run: git commit -m 'Deploy to GitHub Pages ${CI_COMMIT_ID} --skip-ci'
       - run: git push origin gh-pages
 workflows:
   version: 2
   test-deploy:
     jobs:
-      - deploy
+      - deploy:
+          filters:
+            branches:
+              only: master
