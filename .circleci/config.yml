@@ -41,17 +41,16 @@ jobs:
   deploy:
     <<: *defaults
     docker:
-      - image: circleci/python:3.6.3
+      - image: circleci/ruby:2.5
     steps:
       - attach_workspace:
-          at: ./_site
-      - run:
-          - git checkout gh-pages || git checkout --orphan gh-pages
-          - "git config user.name 'Beo Hoang'"
-          - "git config user.email 'beohoang98@noreply.users.github.com'"
-          - git add -A .
-          - "git commit -m 'Deploy to GitHub Pages: ${CI_COMMIT_ID} --skip-ci'"
-          - git push origin gh-pages
+          at: ./_site/
+      - run: git checkout gh-pages || git checkout --orphan gh-pages
+      - run: "git config user.name 'Beo Hoang'"
+      - run: "git config user.email 'beohoang98@noreply.users.github.com'"
+      - run: git add -A .
+      - run: "git commit -m 'Deploy to GitHub Pages: ${CI_COMMIT_ID} --skip-ci'"
+      - run: git push origin gh-pages
 workflows:
   version: 2
   test-deploy:
