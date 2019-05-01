@@ -5,8 +5,8 @@ author: Bảo Lam
 thumbnail: /static/img/liverpool-rong-cua-toi-ngoi-vo-dich-ngoai-hang-anh.png
 date: 15/4/2019, 01:16 (GMT+7)
 categories:
-    - the-thao
-    - bd-anh
+    - Thể thao
+    - Bóng đá Anh
 tags:
     - Liverpool
     - Chelsea

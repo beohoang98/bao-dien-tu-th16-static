@@ -1,0 +1,48 @@
+{%- assign posts = include.posts -%}
+{%- assign post = posts[0] -%}
+<article class="post">
+    <div class="post-thumb">
+        <img lazy src="{{post.thumbnail}}" alt="{{post.title}}" class="post-thumbnail">
+    </div>
+    <div class="post-info">
+        <h2 title="{{post.title}}">
+            <a href="{{post.url}}" target="_self">{{post.title}}</a>
+        </h2>
+        <p>{{post.description}}</p>
+    </div>
+</article>
+<div class="row">
+    <div class="col-md-4">
+        {%- assign post = posts[1] -%}
+        <div class="post-thumb">
+            <img lazy src="{{post.thumbnail}}" alt="{{post.title}}" class="post-thumbnail">
+        </div>
+        <div class="post-info">
+            <h5 title="{{post.title}}">
+                <a href="{{post.url}}" target="_self">{{post.title}}</a>
+            </h5>
+        </div>
+    </div>
+    <div class="col-md-4">
+        {%- assign post = posts[2] -%}
+        <div class="post-thumb">
+            <img lazy src="{{post.thumbnail}}" alt="{{post.title}}" class="post-thumbnail">
+        </div>
+        <div class="post-info">
+            <h5 title="{{post.title}}">
+                <a href="{{post.url}}" target="_self">{{post.title}}</a>
+            </h5>
+        </div>
+    </div>
+    <div class="col-md-4">
+        {%- assign post = posts[3] -%}
+        <div class="post-thumb">
+            <img lazy src="{{post.thumbnail}}" alt="{{post.title}}" class="post-thumbnail">
+        </div>
+        <div class="post-info">
+            <h5 title="{{post.title}}">
+                <a href="{{post.url}}" target="_self">{{post.title}}</a>
+            </h5>
+        </div>
+    </div>
+</div>

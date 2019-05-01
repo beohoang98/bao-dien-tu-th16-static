@@ -9,14 +9,12 @@ layout: default
                 Trang chủ
             </a>
         </li>
-        {%- for item in page.breadcrumb -%}
-            <li class="breadcrumb-item"><a href="{{ item.url | relative_url }}">{{item.title}}</a></li>
-        {%- endfor -%}
+        <li class="breadcrumb-item"><a href="#">{{page.title}}</a></li>
     </ul>
 </div>
 <main class="container">
-    <div class="hero">
-        <h1>{{page.title}}</h1>
+    <div class="hero d-flex"    >
+        <h1 class="text-awesome">{{page.title}}</h1>
     </div>
     {{- content -}}
 </main>

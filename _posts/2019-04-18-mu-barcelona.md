@@ -2,7 +2,7 @@
 title: "Barca - MU: Chống lại số phận"
 date: 16 April 2019
 tags: [Bóng đá, Messi, MU]
-category: [the-thao, bd-anh]
+category: [Thể thao, Bóng đá Anh]
 description: Đội bóng nước Anh phải đánh bại Barca ngay ở Nou Camp nếu muốn tiến vào bán kết Champions League.
 thumbnail: /static/img/messi-mu.png
 author: An

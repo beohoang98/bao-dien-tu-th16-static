@@ -15,7 +15,7 @@
         <title>{{site.title}}</title>
         <meta property="og:title" content="{{site.title}}">
     {%- endif -%}
-    
+
     <meta name="description" content="{{description}}">
     <meta property="og:description" content="{{page.description}}">
     <meta property="og:url" content="{{site.url}}{{page.url}}">
@@ -25,7 +25,7 @@
     {%- else -%}
         <meta property="og:image" content="{{site.url}}/static/img/messi-mu.png">
     {%- endif -%}
-    
+
 
     <link rel="stylesheet" async href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css" integrity="sha384-QokYePQSOwpBDuhlHOsX0ymF6R/vLk/UQVz3WHa6wygxI5oGTmDTv8wahFOSspdm" crossorigin="anonymous">
     <link rel="stylesheet" async href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css" integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq" crossorigin="anonymous">
@@ -46,6 +46,7 @@
     {{- content -}}
     {%- include footer.html -%}
 
+    {%- include switch_user.html -%}
     {%- include modal-login.html -%}
     {%- include modal-signup.html -%}
     {%- include modal-update-post.html-%}

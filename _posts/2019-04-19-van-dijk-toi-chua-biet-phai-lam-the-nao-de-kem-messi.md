@@ -7,8 +7,8 @@ thumbnail: /static/img/van2-8343-1555644274.jpg
 premium: true
 author: Thanh Quý
 categories:
-    - the-thao
-    - bd-anh
+    - Thể thao
+    - Bóng đá Anh
 tags:
     - Van Dijk
     - Messi

@@ -7,8 +7,8 @@ thumbnail: /static/img/aguero-1555739897-1555739907-9693-1555740076.png
 premium: true
 author: Xuân Bình
 categories:
-    - the-thao
-    - bd-anh
+    - Thể thao
+    - Bóng đá Anh
 tags:
     - Man City
     - Tottenham
@@ -50,4 +50,4 @@ Khác với đội khách, Man City có lực lượng mạnh nhất, dù HLV Gu
 
 *Tottenham: Lloris; Trippier, Alderweireld, Vertonghen, Davies; Wanyama, Winks, Alli, Eriksen; Son, Lucas*
 
-**Link bài viết gốc:** [https://bao-dien-tu.beohoang98.now.sh/the-thao/bd-anh/ajax-noi-toi-luyen-nhung-cau-thu-can-truong/](https://bao-dien-tu.beohoang98.now.sh/the-thao/bd-anh/ajax-noi-toi-luyen-nhung-cau-thu-can-truong/)
+**Link bài viết gốc:** [https://bao-dien-tu.beohoang98.now.sh/Thể thao/Bóng đá Anh/ajax-noi-toi-luyen-nhung-cau-thu-can-truong/](https://bao-dien-tu.beohoang98.now.sh/Thể thao/Bóng đá Anh/ajax-noi-toi-luyen-nhung-cau-thu-can-truong/)

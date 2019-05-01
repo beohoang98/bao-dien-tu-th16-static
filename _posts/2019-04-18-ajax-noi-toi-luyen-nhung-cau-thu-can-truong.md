@@ -6,8 +6,8 @@ description: Từng chút một, đội bóng Hà Lan tìm lại ánh hào quang
 thumbnail: /static/img/dutch-football-giants-ajax-are-9648-1491-1555482625.jpg
 type: draft
 categories:
-    - the-thao
-    - bd-anh
+    - Thể thao
+    - Bóng đá Anh
 tags:
     - Ajax
     - Champion League
