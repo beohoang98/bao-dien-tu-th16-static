@@ -2,7 +2,7 @@
 title: "Barca - MU: Chống lại số phận"
 date: 16 April 2019
 tags: [Bóng đá, Messi, MU]
-category: [the-thao, bd-anh]
+category: [Thể thao, Bóng đá Anh]
 description: Đội bóng nước Anh phải đánh bại Barca ngay ở Nou Camp nếu muốn tiến vào bán kết Champions League.
 thumbnail: /static/img/messi-mu.png
 author: An
@@ -17,7 +17,7 @@ type: published
 
 Cuộc ngược dòng trước PSG tiếp thêm tự tin cho Man Utd nhưng thực tế đây là trận đấu họ bị đánh giá thấp hơn rất nhiều so với Barca. Theo thống kê của hãng phân tích dữ liệu Gracenote, Man Utd chỉ có 9% khả năng vào vòng bán kết. Đây không phải điều khó hiểu bởi Barca là thế lực vô cùng mạnh mẽ khi được chơi trên sân nhà Nou Camp. Messi và các đồng đội mới thua một trận ở Nou Camp trong mùa giải này.
 
-| ![Messi sẵn sàng cho trận tái đấu Man Utd. Ảnh: AFP.](https://i-thethao.vnecdn.net/2019/04/16/0011667e-500-7662-1555404192.jpg) |
+| ![Messi sẵn sàng cho trận tái đấu Man Utd. Ảnh: AFP.]({{site.baseurl}}/static/img/messi-2.jpg) |
 |:---:|
 | Messi sẵn sàng cho trận tái đấu Man Utd. Ảnh: AFP |
 

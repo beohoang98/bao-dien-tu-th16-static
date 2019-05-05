@@ -1,6 +1,6 @@
 <article class="card post" title="{{include.post.title}}">
-    <a href="{{include.post.url}}" class="">
-        <img src="{{include.post.thumbnail}}" class="card-img-top" alt="">
+    <a href="{{include.post.url | relative_url}}" class="">
+        <img src="{{include.post.thumbnail | relative_url}}" class="card-img-top" alt="">
         <div class="card-body">
             <h5 class="card-title">{{include.post.title}}</h5>
             <p class="card-text">{{include.post.description}}</p>

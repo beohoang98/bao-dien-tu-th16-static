@@ -5,8 +5,8 @@ author: Bảo Lam
 thumbnail: /static/img/liverpool-rong-cua-toi-ngoi-vo-dich-ngoai-hang-anh.png
 date: 15/4/2019, 01:16 (GMT+7)
 categories:
-    - the-thao
-    - bd-anh
+    - Thể thao
+    - Bóng đá Anh
 tags:
     - Liverpool
     - Chelsea
@@ -16,7 +16,7 @@ tags:
 type: published
 ---
 
-| ![Salah chia vui bàn thắng ấn định tỷ số. Ảnh: AP.](/static/img/liverpool-rong-cua-toi-ngoi-vo-dich-ngoai-hang-anh.png) |
+| ![Salah chia vui bàn thắng ấn định tỷ số. Ảnh: AP.]({{site.baseurl}}/static/img/liverpool-rong-cua-toi-ngoi-vo-dich-ngoai-hang-anh.png) |
 |:---:|
 | Salah chia vui bàn thắng ấn định tỷ số. Ảnh: AP. |
 
@@ -28,7 +28,7 @@ Tái ngộ Chelsea vào thời điểm cuộc đua năm nay đi vào những vò
 
 Man City đang có ít hơn Liverpool hai điểm nhưng cũng chơi ít hơn một trận. Ở năm lượt cuối, họ sẽ phải gặp hai đối thủ lớn là Tottenham và Man Utd, trước khi đối đầu Burnley, Leicester và Brighton. Trong khi đó, Liverpool chỉ phải gặp bốn đối thủ được đánh giá yếu hơn nhiều là Cardiff, Huddersfield, Newcastle và Wolves.
 
-| ![Mane đánh đầu ghi bàn mở tỷ số. Ảnh: Reuters.](/static/img/2261-1555266732-1555266805-2731-1555267688.png) |
+| ![Mane đánh đầu ghi bàn mở tỷ số. Ảnh: Reuters.]({{site.baseurl}}/static/img/2261-1555266732-1555266805-2731-1555267688.png) |
 |:---:|
 | Mane đánh đầu ghi bàn mở tỷ số. Ảnh: Reuters. |
 
@@ -38,7 +38,7 @@ Man City đang có ít hơn Liverpool hai điểm nhưng cũng chơi ít hơn m�
 
 Bàn thắng mở tỷ số giúp Liverpool chơi thăng hoa. Thậm chí chỉ hai phút sau, Salah đã khiến sân Anfield như vỡ oà bằng siêu phẩm sút xa. Cầu thủ người Ai Cập đá chân trái, không cần nhiều đà nhưng bóng đi hiểm vào góc xa, ngoài tầm với của thủ môn Kepa. Đây cũng là bàn thắng thứ 22 của Salah cho Liverpool ở mùa này.
 
-| ![Salah chứng tỏ phẩm chất ngôi sao với bàn thắng ở trận cầu quyết định. Ảnh: Reuters.](/static/img/3085-1555267891-1555267920-6747-1555268832.png) |
+| ![Salah chứng tỏ phẩm chất ngôi sao với bàn thắng ở trận cầu quyết định. Ảnh: Reuters.]({{site.baseurl}}/static/img/3085-1555267891-1555267920-6747-1555268832.png) |
 |:---:|
 | Salah chứng tỏ phẩm chất ngôi sao với bàn thắng ở trận cầu quyết định. Ảnh: Reuters. |
 

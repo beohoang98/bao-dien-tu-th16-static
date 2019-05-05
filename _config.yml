@@ -1,15 +1,28 @@
 title: Báo điện tử TH16
 description: Đồ án giữa kỳ Web CQ2016-33
 permalink: pretty
-url: https://bao-dien-tu.beohoang98.now.sh
+url: https://beohoang98.gitlab.io/bao-dien-tu-static
+baseurl: ""
 
 collections:
   pages:
     output: true
-    permalink: /:name.html
+    permalink: /:name/
   posts:
     output: true
-    permalink: /:categories/:title/
+    permalink: /:title/
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/:name/'
 
 defaults:
   - scope:
@@ -24,3 +37,4 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-archives

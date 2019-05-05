@@ -6,8 +6,8 @@ description: Từng chút một, đội bóng Hà Lan tìm lại ánh hào quang
 thumbnail: /static/img/dutch-football-giants-ajax-are-9648-1491-1555482625.jpg
 type: draft
 categories:
-    - the-thao
-    - bd-anh
+    - Thể thao
+    - Bóng đá Anh
 tags:
     - Ajax
     - Champion League
@@ -15,7 +15,7 @@ tags:
 
 **Từng chút một, đội bóng Hà Lan tìm lại ánh hào quang xưa cũ trong thập niên 1970.**
 
-| ![Logo của Ajax treo trước cổng sân Johan Cruyff ở thủ đô Amsterdam.](/static/img/dutch-football-giants-ajax-are-9648-1491-1555482625.jpg) |
+| ![Logo của Ajax treo trước cổng sân Johan Cruyff ở thủ đô Amsterdam.]({{site.baseurl}}/static/img/dutch-football-giants-ajax-are-9648-1491-1555482625.jpg) |
 |:---:|
 |Logo của Ajax treo trước cổng sân Johan Cruyff ở thủ đô Amsterdam.|
 
@@ -27,7 +27,7 @@ Ajax là một ẩn số trước khi vòng knock-out Champions League mùa này
 
 Mớ lý thuyết ấy được Ajax truyền dạy bắt đầu từ việc ra sân tập mỗi buổi sớm. Tất cả các đội của Ajax tập chung một chỗ, từ đội U9 đến đội một. 12 sân tập được trải dài, được chia đôi bởi một con đường rộng đủ chỗ cho hai ô tô tránh nhau, cách Quảng trường Dam 8 kilomet. Chỉ riêng sân tập chính có khán đài nhỏ ôm sát xuống mặt cỏ, được dành cho những trận đấu tập nội bộ Ajax. Học viên lò Ajax dành gần như nguyên ngày tại đây: tập, ăn, và học bài, trước khi trở về vào buổi tối.
 
-| ![Thế hệ hiện tại của Ajax, với đội trưởng De Ligt (giữa).](/static/img/file-photo-ajax-s-frenkie-de-j-5756-2159-1555482625.jpg) |
+| ![Thế hệ hiện tại của Ajax, với đội trưởng De Ligt (giữa).]({{site.baseurl}}/static/img/file-photo-ajax-s-frenkie-de-j-5756-2159-1555482625.jpg) |
 |:---:|
 |Thế hệ hiện tại của Ajax, với đội trưởng De Ligt (giữa).|
 
@@ -37,7 +37,7 @@ Matthijs De Ligt, viên ngọc sáng giá nhất trong đội hình Ajax bây gi
 
 Khu tập của Học viện Ajax được các thành viên gọi một cách mỹ miều là "nơi giao thoa giữa quá khứ và hiện tại". Chính giữa không gian sinh hoạt chung là một chiếc tủ kính lớn, bên cạnh là những mô hình chiến lợi phẩm mà CLB đoạt được từ thập niên 1970, khi họ trên đỉnh châu Âu. Cách bày biện ở De Toekomst được tối giản hết mức. Những lãnh đạo Ajax muốn các cầu thủ trẻ giữ đôi chân trên mặt đất, chừng nào chưa ra nước ngoài, mà muốn vậy, tất cả phải tập chung, sống chung và được đối xử như nhau.
 
-| ![Những tài năng sáng giá nhất của Ajax hiện nay, gồm De Ligt, De Jong, Dolberg và Ziyech.](/static/img/3023-3958-1555482625.jpg) |
+| ![Những tài năng sáng giá nhất của Ajax hiện nay, gồm De Ligt, De Jong, Dolberg và Ziyech.]({{site.baseurl}}/static/img/3023-3958-1555482625.jpg) |
 |:---:|
 |Những tài năng sáng giá nhất của Ajax hiện nay, gồm De Ligt, De Jong, Dolberg và Ziyech.|
 
@@ -51,7 +51,7 @@ Là một đội bóng có kinh phí hoạt động eo hẹp, khoảng 110 tri�
 
 **Chính sách chuyển nhượng của Ajax cũng thay đổi nhằm giúp đội bóng gặt hái thành công ở châu Âu, sau nhiều năm thất bại**. Thay vì chỉ tập trung mũi nhọn vào cầu thủ trẻ, đội bóng thủ đô Hà Lan dàn trải sự quan tâm sang những cựu binh dày dạn kinh nghiệm thi đấu quốc tế và có kiến thức về bóng đá Hà Lan như Dusan Tadic hay Daley Blind. Sự pha trộn này đem tới sự cân bằng cho Ajax, đồng thời nhen dần lên niềm tin chiến thắng nơi cầu thủ. CLB từng bốn lần vô địch C1 cũng công khai chính sách nhân sự trước mỗi mùa với từng cầu thủ. Ai cũng ý thức rõ ràng về thời điểm họ được phép rời đội bóng. Ngoài ra, họ cũng được tư vấn tận tình về bến đỗ mới, nên là Ngoại hạng Anh, La Liga hay Serie A, để phù hợp lối chơi. Nhờ cách vận hành này, Ajax tránh được thế bị động và cảnh "chảy máu chất xám". 
 
-| ![](/static/img/5cb7259ffc7e93810d8b4580-6546-1555564967.jpg) |
+| ![]({{site.baseurl}}/static/img/5cb7259ffc7e93810d8b4580-6546-1555564967.jpg) |
 |:---:|
 | |
 

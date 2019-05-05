@@ -10,10 +10,10 @@
             <div class="modal-body">
                 <div class="d-flex flex-row-reverse flex-wrap">
                     <div class="col-md-6 text-center">
-                        <img width="200px" src="/static/img/logo.png" alt="">
+                        <img width="200px" src="{{ '/static/img/logo.png' | relative_url }}" alt="">
                     </div>
                     <div class="col-md-6">
-                        <form action="/profile" class="form" method="POST" enctype="multipart/form-data">
+                        <form action="{{ '/profile/' | relative_url }}" class="form" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="login-email">Email</label>
                                 <input type="email" name="email" required
@@ -50,14 +50,14 @@
                     </div>
                     <div class="col-md-4">
                         <button class="btn login-button-zalo">
-                            <img width="16px" src="/static/img/Logo_Zalo.png" alt="">
+                            <img width="16px" src="{{ '/static/img/Logo_Zalo.png' | relative_url }}" alt="">
                             Zalo
                         </button>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <a href="/forget-password" class="mr-auto">Quên mật khẩu</a>
+                <a href="{{ '/forget-password' | relative_url }}" class="mr-auto">Quên mật khẩu</a>
                 <a href="#" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modal-signup" class="link">
                     Đăng ký tài khoản
                 </a>

@@ -7,8 +7,8 @@ thumbnail: /static/img/van2-8343-1555644274.jpg
 premium: true
 author: Thanh Quý
 categories:
-    - the-thao
-    - bd-anh
+    - Thể thao
+    - Bóng đá Anh
 tags:
     - Van Dijk
     - Messi
@@ -19,7 +19,7 @@ tags:
 
 "Tôi chưa biết phải kèm như thế nào. Hãy chờ xem. Chắc chắn đó là một thách thức rất khó. Tôi nghĩ Lionel Messi là cầu thủ hay nhất thế giới, nhưng hãy chờ xem", Virgil Van Dijk trả lời khi được hỏi về cách thức sẽ áp dụng để ngăn chặn Messi.
 
-|![Van Dijk hiện là một trong những trung vệ có phong độ cao nhất. ](/static/img/van2-8343-1555644274.jpg)|
+|![Van Dijk hiện là một trong những trung vệ có phong độ cao nhất. ]({{site.baseurl}}/static/img/van2-8343-1555644274.jpg)|
 |:---:|
 |Van Dijk hiện là một trong những trung vệ có phong độ cao nhất. |
 

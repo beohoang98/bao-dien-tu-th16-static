@@ -3,13 +3,13 @@ layout: default
 title: Writer Dashboard
 permalink: /writer/
 ---
-<link rel="stylesheet" href="/static/profile.css">
+<link rel="stylesheet" href="{{ '/static/profile.css' | relative_url }}">
 <main class="container-fluid profile profile-writer">
     <div class="d-flex flex-column flex-lg-row-reverse" style="height: inherit">
         <div class="col-lg-3">
             <div class="profile-info bg-light rounded">
                 <div class="profile-avatar">
-                    <img src="/static/img/messi-mu.png" alt="">
+                    <img src="{{ '/static/img/messi-mu.png' | relative_url }}" alt="">
                 </div>
                 <div class="profile-displayName">Beo Hoang</div>
                 <div class="profile-username">@anaizhu98</div>
@@ -30,7 +30,7 @@ permalink: /writer/
                         </tr>
                         <tr>
                             <td>
-                                <img src="/static/img/Logo_Zalo.png" height="16px" alt="">
+                                <img src="{{ '/static/img/Logo_Zalo.png' | relative_url }}" height="16px" alt="">
                             </td>
                             <td colspan="2">
                                 <a href="#" class="text-muted">Chưa kết nối</a>
@@ -52,7 +52,7 @@ permalink: /writer/
         <div class="col-md-12 col-lg-9">
             <section class="my-4" style="height: 100%">
                 <div class="float-right">
-                    <a href="/writer/write" class="btn btn-primary">
+                    <a href="{{ '/writer/write' | relative_url }}" class="btn btn-primary">
                         <i class="fas fa-pen-alt"></i>&nbsp;
                         Viết bài
                     </a>
