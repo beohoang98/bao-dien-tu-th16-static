@@ -411,8 +411,10 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <a href="/forget-password" class="mr-auto">Quên mật khẩu</a>
+            <div class="modal-footer d-flex justify-content-between">
+                <a href="#" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modal-forgot-password" class="link">
+                        Quên mật khẩu
+                    </a>
                 <a href="#" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modal-signup" class="link">
                     Đăng ký tài khoản
                 </a>
@@ -485,7 +487,30 @@
             </div>
         </div>
     </div>
-</div><div class="modal fade" role="dialog" id="modal-update-post">
+</div><div class="modal fade" role="dialog" id="modal-forgot-password">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-light">
+                    <h5 class="modal-title">Quên mật khẩu</h5>
+                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <form action="#" class="form" method="POST">
+                      <div class="form-group">
+                          <label for="input-tags">Email</label>
+                          <input class="form-control" id="input-tags" type="email">
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <button class="btn btn-primary mt-2" type="submit">Gửi</button>
+                      </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal fade" role="dialog" id="modal-update-post">
   <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
           <div class="modal-header bg-primary text-light">
