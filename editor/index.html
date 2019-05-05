@@ -66,7 +66,65 @@
         </div>
     </div>
 </nav>
-<link rel="stylesheet" href="/static/profile.css">
+<div class="modal fade" role="dialog" id="modal-update-post">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header bg-primary text-light">
+              <h5 class="modal-title">Chỉnh sửa thông tin</h5>
+              <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <form action="#" class="form" method="POST">
+                <div class="form-group">
+                    <label for="categories">Chuyên mục</label>
+                    <select class="form-control" id="categories">
+                      <option>Công nghệ</option>
+                      <option>Thể thao</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="input-tags">Tags</label>
+                    <input class="form-control" id="input-tags" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="input-date">Ngày đăng</label>
+                    <input class="form-control" id="input-date" type="date">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-primary mt-2" type="submit">Cập nhật</button>
+                </div>
+            </form>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="modal fade" role="dialog" id="modal-reject-detail">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-light">
+                <h5 class="modal-title">Từ chối</h5>
+                <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <form action="#" class="form" method="POST">
+                  <div class="form-group">
+                      <label for="reject-detail">Lý do từ chối</label>
+                      <textarea class="form-control" name="" id="reject-detail" cols="100" rows="20"></textarea>
+                  </div>
+                  
+                  <div class="d-flex justify-content-center">
+                      <button class="btn btn-primary mt-2" type="submit">Từ chối</button>
+                  </div>
+              </form>
+            </div>
+        </div>
+    </div>
+  </div>
+  <link rel="stylesheet" href="/static/profile.css">
 <main class="container-fluid" >
   <div class="d-flex flex-column" style="height:inherit">
     <div class="col-lg-9">
@@ -112,7 +170,7 @@
   </div>
 </article>
 </div>
-            <div class="tab-pane fade" role="tabpanel" id="post-published" aria-labelledby="published-tab"><link rel="stylesheet" href="/static/post.css">
+          <div class="tab-pane fade" role="tabpanel" id="post-published" aria-labelledby="published-tab"><link rel="stylesheet" href="/static/post.css">
 <article class="post-landing d-flex my-4 shadow">
   <div class="col-md-3 m-0 p-0">
     <a class="post-thumb" href="/iphone-11-se-co-camera-truot-tich-hop-may-chieu/">
@@ -258,7 +316,7 @@
   </div>
 </article>
 </div>
-            <div class="tab-pane fade" role="tabpanel" id="post-reject" aria-labelledby="reject-tab"></div>
+          <div class="tab-pane fade" role="tabpanel" id="post-reject" aria-labelledby="reject-tab"></div>
       </div>
     </div>
   </div>
@@ -535,5 +593,6 @@
     <!-- Facebook SDK -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=235849373946738&autoLogAppEvents=1"></script>
+
 </body>
 </html>
