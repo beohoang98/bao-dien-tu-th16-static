@@ -8,6 +8,7 @@ type: pending
 premium: false
 categories:
     - cong-nghe
+    - Startup
 tags:
     - nagakawa
 ---

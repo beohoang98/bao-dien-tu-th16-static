@@ -82,22 +82,22 @@ layout: default
                 <div class="sticky-top" style="top: 70px; z-index: 99;">
                     <h3>Bài viết liên quan</h3>
                     {%- assign next = page.next -%}
-                    {%- if next -%}
+                    {%- if next and next.categories == page.categories -%}
                     {%- include post-small.html post=next -%}
                     {%- assign next = next.next -%}
-                    {%- if next -%}
+                    {%- if next and next.categories == page.categories  -%}
                     {%- include post-small.html post=next -%}
                     {%- endif -%}
                     {%- endif -%}
 
                     {%- assign prev = page.previous -%}
-                    {%- if page.previous -%}
-                    {%- include post-small.html post=page.previous -%}
-                    {%- assign prev = prev.previous -%}
-                    {%- if prev -%}
+                    {%- if prev and prev.categories == page.categories  -%}
                     {%- include post-small.html post=prev -%}
                     {%- assign prev = prev.previous -%}
-                    {%- if prev -%}
+                    {%- if prev and prev.categories == page.categories  -%}
+                    {%- include post-small.html post=prev -%}
+                    {%- assign prev = prev.previous -%}
+                    {%- if prev and prev.categories == page.categories  -%}
                     {%- include post-small.html post=prev -%}
                     {%- endif -%}
                     {%- endif -%}
