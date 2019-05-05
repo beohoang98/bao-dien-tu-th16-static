@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ws --port=8081",
-    "serve": "bundle exec jekyll serve --incremental",
-    "deploy": "gh-pages -d _site"
+    "serve": "bundle exec jekyll serve",
+    "deploy": "gh-pages -d _site -m 'Deploy [ci skip]'"
   },
   "repository": {
     "type": "git",

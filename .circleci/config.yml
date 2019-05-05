@@ -29,24 +29,27 @@ jobs:
           command: cd ~/repo && ls -al # for debug
       - restore_cache:
             keys:
-              - node-v1-{{ checksum "package.json" }}
-              - rubygems-v1-{{ checksum "Gemfile" }}
-              - rubygems-v1-fallback
+              - rubygems-v2-{{ checksum "Gemfile" }}
+              - rubygems-v2-fallback
+      - restore_cache:
+            keys:
+              - node-v2-{{ checksum "package.json" }}
+              - node-v2-fallback
       - run: bundle install --path $BUNDLE_PATH
       - run: npm install
       - save_cache:
-          key: rubygems-v1-{{ checksum "Gemfile" }}
+          key: rubygems-v2-{{ checksum "Gemfile" }}
           paths:
             - vendor/bundle
       - save_cache:
-          key: node-v1-{{ checksum "package.json" }}
+          key: node-v2-{{ checksum "package.json" }}
           paths:
             - node_modules
       - run: bundle exec jekyll build
       - run:
           name: Deploy Github Pages
           command: |
-            git config user.name 'Beo Hoang'
+            git config user.name 'Beo Hoang (CircleCI)'
             git config user.email 'beohoang98@noreply.users.github.com'
             npm run deploy
 workflows:
