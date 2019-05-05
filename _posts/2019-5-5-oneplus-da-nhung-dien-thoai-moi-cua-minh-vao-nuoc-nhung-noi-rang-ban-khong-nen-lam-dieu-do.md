@@ -17,6 +17,8 @@ tags:
 
 Hôm nay, OnePlus đã đăng một video teaser quay lại cảnh chiếc smartphone cao cấp sắp trình làng của họ rơi vào một xô nước. Xếp hạng khả năng chống nước khiến bạn mất thêm tiền khi mua smartphone. Tuy nhiên, chúng ta có thể mua một cái gì đó ít tốn kém hơn. Cụ thể, OnePlus ngụ ý rằng OnePlus 7 Pro sẽ có thể chống nước ở một số mức độ - ngay cả khi công ty đã không trải qua quá trình chứng nhận IP chính thức.
 
+<video controls muted src="{{site.baseurl}}/static/video/OnePlus_teaser.mp4"></video>
+
 Tạm dừng video trong những khoảnh khắc cuối cùng và lưu ý bản in đẹp ở phía dưới: Chống nước trong điều kiện thử nghiệm tối ưu. OnePlus không đảm bảo về khả năng chống nước/chất lỏng. Và cũng giống như các nhà sản xuất điện thoại thông minh khác (ngay cả những nhà sản xuất có chứng nhận IP67 hoặc IP68), OnePlus lưu ý rằng thiệt hại về nước không được bảo hành theo chính sách của hãng.
 
 Điều này sẽ gây nên sự phấn khích từ các fan hâm mộ thiết bị mới của OnePlus hay lại có tác dụng ngược? Một số người chỉ ra rằng giá điện thoại OnePlus tăng lên mỗi năm nên họ cũng phải tìm kiếm các chứng nhận phù hợp, tương đương với các thương hiệu như Apple, Samsung hay Huawei. Để tránh những hiểu lầm đáng tiếc, Carl Pei, người đồng sáng lập OnePlus đã đăng tải một bài trên blog video của ông để giải thích rõ hơn:
