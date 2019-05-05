@@ -59,16 +59,29 @@
                     </button>
                 </div>
             </form>
-            <button class="btn text-light" role="button" data-toggle="modal" data-target="#modal-login">
+            <button class="btn text-light normal-ui" role="button" data-toggle="modal" data-target="#modal-login">
                 <i class="fas fa-user"></i>
                 Đăng nhập / Đăng ký
             </button>
+
+            <a href="/writer/" role="button" class="btn btn-dark writer-ui">
+                <i class="fas fa-user"></i>&nbsp;
+                Dashboard
+            </a>
+            <a href="/editor/" role="button" class="btn btn-dark editor-ui">
+                <i class="fas fa-user"></i>&nbsp;
+                Dashboard
+            </a>
+            <a href="/admin/" role="button" class="btn btn-dark admin-ui">
+                <i class="fas fa-user"></i>&nbsp;
+                Dashboard
+            </a>
         </div>
     </div>
 </nav>
-<div class="writer-ui">
+<div class="writer-ui writer-ui-float">
     <div>
-        <a href="/writer/write" class="btn btn-primary">
+        <a href="/writer/write/" class="btn btn-primary">
             <i class="fas fa-pen-square"></i>&nbsp;
             Chỉnh sửa
         </a>
@@ -179,7 +192,8 @@
     </section>
 </main>
 
-<script src="/static/post.js"></script><footer class="bg-dark text-light d-flex align-items-center container-fluid" style="min-height: 300px">
+<script src="/static/post.js"></script>
+<footer class="bg-dark text-light d-flex align-items-center container-fluid" style="min-height: 300px">
     <div class="container">
 
         <div class="row">

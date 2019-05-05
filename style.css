@@ -19,7 +19,7 @@
   background: cyan;
   color: black; }
 
-.writer-ui {
+.writer-ui-float {
   position: fixed;
   top: 100px;
   left: 1em;
@@ -89,6 +89,9 @@
     height: 120px; }
   .post-small .post-info {
     padding: 0.5em; }
+
+.writer-ui, .premium-ui, .admin-ui, .editor-ui {
+  display: none; }
 
 html, body {
   scroll-behavior: smooth; }
