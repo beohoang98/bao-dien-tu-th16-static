@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Editor Dashboard
+title: Home
 permalink: /home/
 ---
-<link rel="stylesheet" href="/_home.css">
+<link rel="stylesheet" href="{{ '/static/home.css' | relative_url }}">
 <div class="container mt-4">
   <div class="row ">
-      <div class="col-md-6" style="height:500px; overflow:scroll;">
+      <div class="col-md-6" style="height:500px; overflow:scroll; overflow-x: hidden;">
         <ul style="list-style:none;">
           {%- for post in site.posts-%}
           <li>
@@ -21,7 +21,7 @@ permalink: /home/
                 <div class="ml-2">
                   <div class="card-subtitle">{{post.description}}</div>
                   <div class="d-flex justify-content-between mt-2">
-                    <p>{{post.categories}}</p>
+                    <p>{{post.categories }}</p>
                     <p>{{post.date | date: '%d %B %Y'}}</p>
                   </div>
                 </div>
@@ -51,35 +51,267 @@ permalink: /home/
       </div>
   </div>
 </div>
-
-<div class="container multi-carousel">
-  {%- for post in site.posts -%}
-  <article class="card m-2 post multi-carousel-item" style="width: 300px; max-width: 100%;">
-      <div class="post-thumb">
-          <img src="{{post.thumbnail}}" alt="" class="card-img-top">
+<style>
+.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+.MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+.MultiCarousel .MultiCarousel-inner .item { float: left;}
+.MultiCarousel .MultiCarousel-inner .item > div { padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+.MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+.MultiCarousel .leftLst { left:0; }
+.MultiCarousel .rightLst { right:0; }
+  
+.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+</style>
+<!--Newest posts-->
+<div class="container mt-4">
+  <!--option-->
+  <div class="d-flex justify-content-between ">
+    <h4>Bài viết mới nhất</h4>
+    <div class="dropdown mr-1">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+        Chuyên mục
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+        <a class="dropdown-item" href="#">Công nghệ</a>
+        <a class="dropdown-item" href="#">Thể thao</a>
       </div>
-      <div class="card-body">
-          <h3 class="card-title">
-              <a href="{{post.url}}">{{post.title}}</a>
-          </h3>
-          <div class="card-subtitle">{{post.description}}</div>
-      </div>
-      <div class="card-footer">
-          <div class="d-flex justify-content-between align-items-center">
-              <div class="post-date">
-                  <small>
-                      <i class="fas fa-clock"></i>&nbsp;
-                      {{post.date | date: '%d %B %Y'}}
-                  </small>
-              </div>
-              <small>
-                  <a href="{{post.url}}" class="btn btn-secondary text-sm">Xem thêm</a>
-              </small>
-          </div>
-      </div>
-  </article>
-  {%- endfor -%}
-  <button class="btn btn-primary leftLst"><</button>
-  <button class="btn btn-primary rightLst">></button>
+    </div>
+  </div>
+  <!--carousel-->
+  <div class="row">
+    <div class="MultiCarousel" data-items="3" data-slide="1" id="MultiCarousel"  data-interval="1000">
+        <div class="MultiCarousel-inner card-deck">
+            {%- for post in site.posts -%}
+            <article class="card m-2 post item" style="width: 200px;">
+                <div class="post-thumb" style="height: 200px; object-fit: true;">
+                    <img src="{{post.thumbnail}}" alt="" class="card-img-top">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="{{post.url}}" style="font-size: 17px;">{{post.title}}</a>
+                    </h3>
+                    <div class="card-subtitle"><p style="font-size: 12px;">{{post.description}}</p></div>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="post-date">
+                            <small>
+                                <i class="fas fa-clock"></i>&nbsp;
+                                {{post.date | date: '%d %B %Y'}}
+                            </small>
+                        </div>
+                        <small>
+                            <a href="{{post.url}}" class="btn btn-secondary text-sm">Xem thêm</a>
+                        </small>
+                    </div>
+                </div>
+            </article>
+            {%- endfor -%}
+        </div>
+        <button class="btn btn-primary leftLst"><</button>
+        <button class="btn btn-primary rightLst">></button>
+    </div>
+  </div>
 </div>
+
+<!--The most prominent posts-->
+<div class="container">
+  <!--carousel-->
+  <h4>Bài viết nổi bật nhất</h4>
+  <div class="row">
+    <div class="MultiCarousel" data-items="3" data-slide="1" id="MultiCarousel"  data-interval="1000">
+        <div class="MultiCarousel-inner card-deck">
+            {%- for post in site.posts -%}
+            <article class="card m-2 post item" style="width: 200px;">
+                <div class="post-thumb" style="height: 200px; object-fit: true;">
+                    <img src="{{post.thumbnail}}" alt="" class="card-img-top">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="{{post.url}}" style="font-size: 17px;">{{post.title}}</a>
+                    </h3>
+                    <div class="card-subtitle"><p style="font-size: 12px;">{{post.description}}</p></div>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="post-date">
+                            <small>
+                                <i class="fas fa-clock"></i>&nbsp;
+                                {{post.date | date: '%d %B %Y'}}
+                            </small>
+                        </div>
+                        <small>
+                            <a href="{{post.url}}" class="btn btn-secondary text-sm">Xem thêm</a>
+                        </small>
+                    </div>
+                </div>
+            </article>
+            {%- endfor -%}
+        </div>
+        <button class="btn btn-primary leftLst"><</button>
+        <button class="btn btn-primary rightLst">></button>
+    </div>
+  </div>
+</div>
+
+<!--Most viewed posts-->
+<div class="container">
+  <!--option-->
+  <div class="d-flex justify-content-between ">
+    <h4>Bài viết được xem nhiều nhất</h4>
+    <div class="dropdown mr-1">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+        Chuyên mục
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+        <a class="dropdown-item" href="#">Công nghệ</a>
+        <a class="dropdown-item" href="#">Thể thao</a>
+      </div>
+    </div>
+  </div>
+  <!--carousel-->
+  <div class="row">
+    <div class="MultiCarousel" data-items="3" data-slide="1" id="MultiCarousel"  data-interval="1000">
+        <div class="MultiCarousel-inner card-deck">
+            {%- for post in site.posts -%}
+            <article class="card m-2 post item" style="width: 200px;">
+                <div class="post-thumb" style="height: 200px; object-fit: true;">
+                    <img src="{{post.thumbnail}}" alt="" class="card-img-top">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="{{post.url}}" style="font-size: 17px;">{{post.title}}</a>
+                    </h3>
+                    <div class="card-subtitle"><p style="font-size: 12px;">{{post.description}}</p></div>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="post-date">
+                            <small>
+                                <i class="fas fa-clock"></i>&nbsp;
+                                {{post.date | date: '%d %B %Y'}}
+                            </small>
+                        </div>
+                        <small>
+                            <a href="{{post.url}}" class="btn btn-secondary text-sm">Xem thêm</a>
+                        </small>
+                    </div>
+                </div>
+            </article>
+            {%- endfor -%}
+        </div>
+        <button class="btn btn-primary leftLst"><</button>
+        <button class="btn btn-primary rightLst">></button>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function () {
+    var itemsMainDiv = ('.MultiCarousel');
+    var itemsDiv = ('.MultiCarousel-inner');
+    var itemWidth = "";
+
+    $('.leftLst, .rightLst').click(function () {
+        var condition = $(this).hasClass("leftLst");
+        if (condition)
+            click(0, this);
+        else
+            click(1, this)
+    });
+
+    ResCarouselSize();
+
+
+
+
+    $(window).resize(function () {
+        ResCarouselSize();
+    });
+
+    //this function define the size of the items
+    function ResCarouselSize() {
+        var incno = 0;
+        var dataItems = ("data-items");
+        var itemClass = ('.item');
+        var id = 0;
+        var btnParentSb = '';
+        var itemsSplit = '';
+        var sampwidth = $(itemsMainDiv).width();
+        var bodyWidth = $('body').width();
+        $(itemsDiv).each(function () {
+            id = id + 1;
+            var itemNumbers = $(this).find(itemClass).length;
+            incno = $(this).parent().attr(dataItems);
+            itemWidth = sampwidth / incno;
+            $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+            // if (bodyWidth >= 1200) {
+            //     incno = itemsSplit[3];
+            //     itemWidth = sampwidth / incno;
+            // }
+            // else if (bodyWidth >= 992) {
+            //     incno = itemsSplit[2];
+            //     itemWidth = sampwidth / incno;
+            // }
+            // else if (bodyWidth >= 768) {
+            //     incno = itemsSplit[1];
+            //     itemWidth = sampwidth / incno;
+            // }
+            // else {
+            //     incno = itemsSplit[0];
+            //     itemWidth = sampwidth / incno;
+            // }
+            $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+            $(this).find(itemClass).each(function () {
+                $(this).outerWidth(itemWidth);
+            });
+
+            $(".leftLst").addClass("over");
+            $(".rightLst").removeClass("over");
+
+        });
+    }
+
+
+    //this function used to move the items
+    function ResCarousel(e, el, s) {
+        var leftBtn = ('.leftLst');
+        var rightBtn = ('.rightLst');
+        var translateXval = '';
+        var divStyle = $(el + ' ' + itemsDiv).css('transform');
+        var values = divStyle.match(/-?[\d\.]+/g);
+        var xds = Math.abs(values[4]);
+        if (e == 0) {
+            translateXval = parseInt(xds) - parseInt(itemWidth * s);
+            $(el + ' ' + rightBtn).removeClass("over");
+
+            if (translateXval <= itemWidth / 2) {
+                translateXval = 0;
+                $(el + ' ' + leftBtn).addClass("over");
+            }
+        }
+        else if (e == 1) {
+            var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+            translateXval = parseInt(xds) + parseInt(itemWidth * s);
+            $(el + ' ' + leftBtn).removeClass("over");
+
+            if (translateXval >= itemsCondition - itemWidth / 2) {
+                translateXval = itemsCondition;
+                $(el + ' ' + rightBtn).addClass("over");
+            }
+        }
+        $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+    }
+
+    //It is used to get some elements from btn
+    function click(ell, ee) {
+        var Parent = "#" + $(ee).parent().attr("id");
+        var slide = $(Parent).attr("data-slide");
+        ResCarousel(ell, Parent, slide);
+    }
+
+});
+</script>
 
