@@ -1,10 +1,26 @@
 # BÁO ĐIỆN TỬ TH-16 (web tĩnh)
 
-## Preview
+## Preview online
 
 [Deploy on Now.sh](https://bao-dien-tu.beohoang98.now.sh)
 
-## Run in localhost
+## Preview on localhost
+
+```bash
+npm install -g local-web-server
+# then
+ws --port=8080
+```
+
+or if you have `php`
+
+```bash
+php -S localhost:8080
+```
+
+then go to http://localhost:8080/
+
+## Develop in localhost
 
 1. **Requirement**
 
