@@ -3,6 +3,8 @@ layout: default
 title: Editor Dashboard
 permalink: /editor/
 ---
+{%- include modal-update-post.html-%}
+{%- include modal-reject-detail.html-%}
 <link rel="stylesheet" href="/static/profile.css">
 <main class="container-fluid" >
   <div class="d-flex flex-column" style="height:inherit">
@@ -25,21 +27,21 @@ permalink: /editor/
               {%- include post-landing-editor.html post=post -%}
               {%- endif -%}
               {%- endfor -%}
-            </div>
-            <div class="tab-pane fade" role="tabpanel" id="post-published" aria-labelledby="published-tab">
-                {%- for post in site.posts -%}
-                {%- if post.type == 'published' -%}
-                {%- include post-landing-editor.html post=post -%}
-                {%- endif -%}
-                {%- endfor -%}
-            </div>
-            <div class="tab-pane fade" role="tabpanel" id="post-reject" aria-labelledby="reject-tab">
-                {%- for post in site.posts -%}
-                {%- if post.type == 'reject' -%}
-                {%- include post-landing-editor.html post=post -%}
-                {%- endif -%}
-                {%- endfor -%}
-            </div>
+          </div>
+          <div class="tab-pane fade" role="tabpanel" id="post-published" aria-labelledby="published-tab">
+              {%- for post in site.posts -%}
+              {%- if post.type == 'published' -%}
+              {%- include post-landing-editor.html post=post -%}
+              {%- endif -%}
+              {%- endfor -%}
+          </div>
+          <div class="tab-pane fade" role="tabpanel" id="post-reject" aria-labelledby="reject-tab">
+              {%- for post in site.posts -%}
+              {%- if post.type == 'reject' -%}
+              {%- include post-landing-editor.html post=post -%}
+              {%- endif -%}
+              {%- endfor -%}
+          </div>
       </div>
     </div>
   </div>

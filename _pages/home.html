@@ -1,0 +1,85 @@
+---
+layout: default
+title: Editor Dashboard
+permalink: /home/
+---
+<link rel="stylesheet" href="/_home.css">
+<div class="container mt-4">
+  <div class="row ">
+      <div class="col-md-6" style="height:500px; overflow:scroll;">
+        <ul style="list-style:none;">
+          {%- for post in site.posts-%}
+          <li>
+            <article class="card m-2">
+              <h3 class="card-title">
+                <a href="#">{{post.title}}</a>
+              </h3>
+              <div class="d-flex">
+                <div style="width: 500px;">
+                  <img src="{{post.thumbnail}}" alt="{{post.title}}" style="object-fit: true;">
+                </div>
+                <div class="ml-2">
+                  <div class="card-subtitle">{{post.description}}</div>
+                  <div class="d-flex justify-content-between mt-2">
+                    <p>{{post.categories}}</p>
+                    <p>{{post.date | date: '%d %B %Y'}}</p>
+                  </div>
+                </div>
+              </div>
+          </article>
+          </li>
+          {%-endfor-%}
+        </ul>
+       
+      </div>
+      <div class="col-md-6">
+          <article class="card m-2" style="width: 400px;">
+            <div>
+              <img src="/static/img/5cb7259ffc7e93810d8b4580-6546-1555564967.jpg" alt="" style="object-fit: true;">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="#">Nagakawa ra mắt điều hòa Multi DC Inverter dành cho căn hộ chung cư</a>
+              </h3>
+              <div class="card-subtitle">Sản phẩm có hiệu suất cao, giảm lượng khí thải, tiết kiệm điện năng và sử dụng môi chất gas R32 thân thiện với môi trường.</div>
+              <div class="d-flex justify-content-around">
+                <p>cong-nghe</p>
+                <p>18/03/2019</p>
+              </div>
+            </div>
+          </article>
+      </div>
+  </div>
+</div>
+
+<div class="container multi-carousel">
+  {%- for post in site.posts -%}
+  <article class="card m-2 post multi-carousel-item" style="width: 300px; max-width: 100%;">
+      <div class="post-thumb">
+          <img src="{{post.thumbnail}}" alt="" class="card-img-top">
+      </div>
+      <div class="card-body">
+          <h3 class="card-title">
+              <a href="{{post.url}}">{{post.title}}</a>
+          </h3>
+          <div class="card-subtitle">{{post.description}}</div>
+      </div>
+      <div class="card-footer">
+          <div class="d-flex justify-content-between align-items-center">
+              <div class="post-date">
+                  <small>
+                      <i class="fas fa-clock"></i>&nbsp;
+                      {{post.date | date: '%d %B %Y'}}
+                  </small>
+              </div>
+              <small>
+                  <a href="{{post.url}}" class="btn btn-secondary text-sm">Xem thêm</a>
+              </small>
+          </div>
+      </div>
+  </article>
+  {%- endfor -%}
+  <button class="btn btn-primary leftLst"><</button>
+  <button class="btn btn-primary rightLst">></button>
+</div>
+
