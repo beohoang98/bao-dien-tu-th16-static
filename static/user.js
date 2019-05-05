@@ -1,31 +1,7 @@
 (($)=>{
     $(document).ready(() => {
-
-        const typeParam = (new URL(location)).searchParams.get('type') || 'normal';
-        const types = typeParam.split(' ');
-        console.log(types);
-
-        for (const type of types) {
-            switch (type) {
-                case 'premium':
-                case 'writer':
-                case 'editor':
-                case 'admin':
-                    $('.normal-ui').css('display', 'none');
-                    $(`.${type}-ui`).css('display', 'block');
-                    break;
-
-                case 'normal': 
-                    $('.normal-ui').css('display', 'block');
-                    break;
-                default: 
-                    $('.normal-ui').css('display', 'block');
-                    break;
-            }
-        }
-
         $('#change-avatar').on('change', handleAvatarChange);
-        
+
         $('#edit-basic').on('click', () => {
             $('#basic').addClass('editable');
         });
